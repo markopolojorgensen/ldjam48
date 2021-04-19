@@ -1,0 +1,104 @@
+TODO
+  project settings
+  addons
+  addon: screenshot taker
+  font
+  logo animation
+  itch.io
+  email family
+  palette
+
+
+hack & slash rpg
+  binding of isaac style rooms
+  hyper light drifter
+  wizard of legend
+
+potential theme ideas
+  Delivery
+    fantasy paper delivery lad
+    hacknslash: literal greek marathon
+    qwop
+  One time use
+    hacknslash: all weapons break immediately
+  Momentum
+    gbe movement sumo wrestling
+    hacknslash: on ice
+  Rain
+    you are a storm, ruin this parade
+  Something is missing
+    hacknslash: each room gives you a different curse (legs are missing, can't move | arms are missing, can't use weapon, etc.)
+  Split in two
+  Fragile
+    hacknslash: die in one hit
+  Leave something behind
+    hacknslash: weapons are trails of dangerous material that you and enemies leave behind
+  Expansion
+  Out of bounds
+    rabbit with a limited number of dashes
+  Instructions unclear
+    be yourself (collections of bad advice)
+  Shoot for the moon
+    cat-a-paw-lt
+    hacknslash: moon is the final boss
+    cheese hunter
+  Playing both sides
+  Clockwork
+    obra dinn style sleuth game where someone kills time
+    hacknslash: time themed abilities
+  You are what you eat
+    hacknslash: quest for the best food
+  Lost signal
+
+  Fragmentation
+  Automation
+    radioactive worm storm 2
+  Generations
+    hacknslash: rogue legacy
+  Containment
+  Feed the fire
+    you are a little demon that has to go fight shrubs to get wood
+    hacknslash: viking that has to go fight monsters to steal coal that can feed the forge
+    hacknslash: you are a fire demon fighting off
+  Deeper and deeper
+    hacknslash: multilevel dungeon hades ripoff
+  Supply lines
+  One tool, many uses
+  Equilibrium
+    hacknslash: only tradeoff items
+  Stick together
+    hacknslash: you are the banner carrier, know when to rally your troops and where to direct them
+  Symmetry
+    hacknslash: only tradeoff items
+  Perspectives
+    hacknslash: switch between various colorblind modes
+  Garden
+    hacknslash: nip & pare
+    invasive species
+  Corruption
+  Butterfly effect
+  Hivemind
+    hacknslash: your beehive has been infested by the zombie plague
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DONE
+  git project
+
+
+
+
