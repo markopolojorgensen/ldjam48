@@ -4,7 +4,6 @@ TODO
   font
   logo animation
   email family
-  palette
 
 
 resolution
@@ -156,6 +155,7 @@ post-jam todo
 
 
 DONE
+  palette
   github
   project settings
   git project

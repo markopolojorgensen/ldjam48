@@ -1,3 +1,10 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://logo_intro.tscn" type="PackedScene" id=1]
 
 [node name="game" type="Node2D"]
+
+[node name="canvas_layer" type="CanvasLayer" parent="."]
+
+[node name="logo_intro" parent="canvas_layer" instance=ExtResource( 1 )]
+skip = true
