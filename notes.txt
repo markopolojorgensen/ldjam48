@@ -3,10 +3,8 @@ TODO
   addon: screenshot taker
   font
   logo animation
-  itch.io
   email family
   palette
-  github
 
 
 resolution
@@ -24,6 +22,7 @@ hack & slash rpg
   binding of isaac style rooms
   hyper light drifter
   wizard of legend
+
 
 potential theme ideas
   Delivery
@@ -132,11 +131,32 @@ potential theme ideas
 
 
 
+post-jam todo
+  make builds
+  test builds
+  itch page description
+  ldjam page description
+  github readme
+  links everywhere
+    itch
+    ldjam
+    github
+  itch -> edit game -> metadata
+
+* Godot
+* Aseprite
+* Sunvox
+* JuiceFX, SmearFX, Pixel FX Designer
+* ColorTool
+
+
+
 
 
 
 
 DONE
+  github
   project settings
   git project
 
