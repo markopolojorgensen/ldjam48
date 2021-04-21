@@ -16,7 +16,17 @@ _global_script_class_icons={
 [application]
 
 config/name="LDJAM48 | markopolodev | ???"
+run/main_scene="res://game.tscn"
 config/icon="res://icon.png"
+
+[debug]
+
+gdscript/warnings/exclude_addons=false
+gdscript/warnings/return_value_discarded=false
+
+[node]
+
+name_casing=2
 
 [rendering]
 
