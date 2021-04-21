@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/fancy logo sfx.ogg-3f9baecd86a85697b8759ced2172b7a8.oggstr"
+
+[deps]
+
+source_file="res://external/sunvox/sfx/fancy logo sfx.ogg"
+dest_files=[ "res://.import/fancy logo sfx.ogg-3f9baecd86a85697b8759ced2172b7a8.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
