@@ -1,5 +1,4 @@
 TODO
-  project settings
   addons
   addon: screenshot taker
   font
@@ -7,6 +6,18 @@ TODO
   itch.io
   email family
   palette
+  github
+
+
+resolution
+  should be a divisor of 1920x1080
+  should be a multiple of 16x9
+    320x180 (/6)
+    384x216 (/5)
+    480x270 (/4)
+    640x360 (/3)
+    960x540 (/2)
+
 
 
 hack & slash rpg
@@ -76,11 +87,40 @@ potential theme ideas
     hacknslash: nip & pare
     invasive species
   Corruption
+    hacknslash: all upgrades increase corruption, making future rooms harder
   Butterfly effect
   Hivemind
     hacknslash: your beehive has been infested by the zombie plague
 
-
+  Parasite
+    radioactive worm storm 2
+  Choose your poison
+  Recycling
+    give up bonuses for other bonuses???
+  Reflections
+    twin stick shooter: bullets bounce
+  Some assembly required
+    hacknslash: you are a robot putting yourself back together
+  Shelter
+    kingdom perspective hacknslash hades clone where occassionally evil hail falls and tries to murder you
+      hiding under shelter prevents the hail from spawning enemies
+  Out of order
+    coinbox hero
+  Overflow
+  Summoning
+    hacknslash: summon minions, fight other summoners
+  You are the power source
+    hacknslash: game speed is always scaled to your health
+  Duplication
+    hacknslash hades clone where your primary ability is to create a clone of yourself
+      upgrades: clones get their own health, clones have more health, clones do more damage, etc.
+  You really shouldn't mix those
+  Public transport
+  Myths and legends
+    hacknslash: arena of myths and legends / hades clone
+  Hidden world
+  Never break the chain
+    hacknslash: your weapon is a ball and chain
 
 
 
@@ -97,6 +137,7 @@ potential theme ideas
 
 
 DONE
+  project settings
   git project
 
 
