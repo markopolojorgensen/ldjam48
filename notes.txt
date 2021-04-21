@@ -1,8 +1,6 @@
 TODO
   addons
   addon: screenshot taker
-  font
-  logo animation
   email family
 
 
@@ -12,7 +10,7 @@ resolution
     320x180 (/6)
     384x216 (/5)
     480x270 (/4)
-    640x360 (/3)
+    640x360 (/3) <- this one
     960x540 (/2)
 
 
@@ -131,6 +129,7 @@ potential theme ideas
 
 
 post-jam todo
+  REMOVE INSTAQUIT
   make builds
   test builds
   itch page description
@@ -155,6 +154,10 @@ post-jam todo
 
 
 DONE
+  instaquit
+  empty global script
+  font
+  logo animation
   palette
   github
   project settings
