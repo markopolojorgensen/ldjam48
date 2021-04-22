@@ -11,3 +11,5 @@ func _ready():
 		yield(get_tree().create_timer(1), "timeout")
 		$animation_player.play("show_logo")
 
+func _on_lifetime_timeout():
+	queue_free()

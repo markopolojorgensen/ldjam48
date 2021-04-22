@@ -1,12 +1,11 @@
 TODO
-  port to 3.3
   addons
   addon: screenshot taker
-  email family
-
+  chores
 
 main menu hints system?
-
+  f11 to toggle fullscreen!
+  m to mute
 
 resolution
   should be a divisor of 1920x1080
@@ -21,6 +20,8 @@ resolution
 
 hack & slash rpg
   binding of isaac style rooms
+  monolith
+  hades
   hyper light drifter
   wizard of legend
 
@@ -99,6 +100,7 @@ post-jam todo
 
 
 DONE
+  port to 3.3
   instaquit
   empty global script
   font

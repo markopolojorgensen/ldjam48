@@ -169,6 +169,7 @@ tracks/4/keys = {
 [node name="logo_intro" type="PanelContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 theme = ExtResource( 92 )
 script = ExtResource( 91 )
 __meta__ = {
@@ -178,12 +179,14 @@ __meta__ = {
 [node name="center_container" type="CenterContainer" parent="."]
 margin_right = 640.0
 margin_bottom = 360.0
+mouse_filter = 2
 
 [node name="control" type="Control" parent="center_container"]
 margin_left = 320.0
 margin_top = 180.0
 margin_right = 320.0
 margin_bottom = 180.0
+mouse_filter = 2
 
 [node name="animated_sprite" type="AnimatedSprite" parent="center_container/control"]
 modulate = Color( 1, 1, 1, 0 )
@@ -194,3 +197,10 @@ anims/show_logo = SubResource( 2 )
 
 [node name="audio_stream_player" type="AudioStreamPlayer" parent="animation_player"]
 stream = ExtResource( 93 )
+
+[node name="lifetime" type="Timer" parent="."]
+wait_time = 2.5
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="lifetime" to="." method="_on_lifetime_timeout"]
