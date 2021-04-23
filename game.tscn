@@ -23,4 +23,3 @@ layer = 20
 
 [node name="logo_intro" parent="canvas_layer" instance=ExtResource( 1 )]
 visible = false
-skip = true
