@@ -1,6 +1,4 @@
 TODO
-  addons
-  addon: screenshot taker
   chores
 
 main menu hints system?
@@ -68,6 +66,7 @@ potential theme ideas
       wave-by-wave challenges
       unlocking initial loadouts
   Split in two
+    hacknslash: whenever you take damage, split into multiple characters that all use the same input
   Summoning
     hacknslash: summon minions, fight other summoners
 
@@ -76,23 +75,30 @@ potential theme ideas
 
 post-jam todo
   REMOVE INSTAQUIT
+  
   make builds
   test builds
+  
   itch page description
   ldjam page description
   github readme
+  description need to include font credit
+  
   links everywhere
     itch
     ldjam
     github
+  
   itch -> edit game -> metadata
 
+
+Description:
 * Godot
 * Aseprite
 * Sunvox
 * JuiceFX, SmearFX, Pixel FX Designer
 * ColorTool
-
+* Font: m3x6 by Daniel Linssen
 
 
 
@@ -100,6 +106,7 @@ post-jam todo
 
 
 DONE
+  addon: screenshot taker
   port to 3.3
   instaquit
   empty global script
