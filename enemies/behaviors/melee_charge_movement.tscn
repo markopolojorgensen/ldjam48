@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://enemies/behaviors/melee_charge_movement.gd" type="Script" id=1]
+
+[node name="melee_charge_movement" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="interval" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="duration" type="Timer" parent="."]
+one_shot = true
+
+[node name="charge_state" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="timeout" from="interval" to="." method="_on_interval_timeout"]
+[connection signal="timeout" from="duration" to="." method="_on_duration_timeout"]

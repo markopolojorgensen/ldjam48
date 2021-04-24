@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://_addons/health/health_bar.gd" type="Script" id=1]
+[ext_resource path="res://external/aseprite/ui/health_bars/health_bar_16px_01.png" type="Texture" id=2]
+[ext_resource path="res://external/aseprite/ui/health_bars/bar_cap.png" type="Texture" id=3]
+[ext_resource path="res://external/aseprite/ui/health_bars/health_bar_16px_00.png" type="Texture" id=4]
+
+[node name="health_bar" type="HBoxContainer"]
+margin_right = 16.0
+margin_bottom = 3.0
+custom_constants/separation = 0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="left_end" type="TextureRect" parent="."]
+margin_right = 1.0
+margin_bottom = 3.0
+texture = ExtResource( 3 )
+
+[node name="texture_progress" type="TextureProgress" parent="."]
+margin_left = 1.0
+margin_right = 15.0
+margin_bottom = 3.0
+rect_min_size = Vector2( 0, 3 )
+rect_pivot_offset = Vector2( -18, -4 )
+size_flags_horizontal = 3
+size_flags_vertical = 4
+value = 100.0
+texture_under = ExtResource( 4 )
+texture_progress = ExtResource( 2 )
+nine_patch_stretch = true
+
+[node name="right_end" type="TextureRect" parent="."]
+margin_left = 15.0
+margin_right = 16.0
+margin_bottom = 3.0
+texture = ExtResource( 3 )

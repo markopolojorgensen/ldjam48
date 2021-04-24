@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://_addons/movement/raycast_circle.gd" type="Script" id=1]
+
+[node name="raycast_circle" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="ray_cast_2d" type="RayCast2D" parent="."]
+cast_to = Vector2( 0, -50 )
+
+[node name="ray_cast_2d2" type="RayCast2D" parent="."]
+
+[node name="ray_cast_2d3" type="RayCast2D" parent="."]
+
+[node name="ray_cast_2d4" type="RayCast2D" parent="."]
+
+[node name="ray_cast_2d5" type="RayCast2D" parent="."]
+
+[node name="ray_cast_2d6" type="RayCast2D" parent="."]
+
+[node name="ray_cast_2d7" type="RayCast2D" parent="."]
+
+[node name="ray_cast_2d8" type="RayCast2D" parent="."]

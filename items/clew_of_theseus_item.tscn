@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://items/item.tscn" type="PackedScene" id=1]
+
+[node name="clew_of_theseus_item" instance=ExtResource( 1 )]
+scale = Vector2( 1, 1 )
+item_name = "clew_of_theseus"
+
+[node name="item_title" parent="panel_container/margin_container/v_box_container" index="0"]
+text = "Clew of Theseus"
+
+[node name="rich_text_label" parent="panel_container/margin_container/v_box_container" index="2"]
+text = "Touching enemies ties them up for a short time."

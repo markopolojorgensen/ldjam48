@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://floors/floor.tscn" type="PackedScene" id=1]
+[ext_resource path="res://enemies/dummy_enemy.tscn" type="PackedScene" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 942, 31 )
+
+[node name="tutorial_floor" instance=ExtResource( 1 )]
+
+[node name="ladder_down" parent="." index="0"]
+position = Vector2( 530, 166 )
+
+[node name="wall_top" parent="y_sort" index="0"]
+position = Vector2( 634, 20 )
+
+[node name="wall_bottom" parent="y_sort" index="1"]
+position = Vector2( 314, 598 )
+
+[node name="collision_shape_2d" parent="y_sort/wall_bottom" index="0"]
+shape = SubResource( 1 )
+
+[node name="icon" parent="y_sort/wall_bottom" index="1"]
+position = Vector2( 322.5, 0 )
+scale = Vector2( 20.1094, 1 )
+
+[node name="wall_left" parent="y_sort" index="2"]
+position = Vector2( 21, 313 )
+
+[node name="wall_right" parent="y_sort" index="3"]
+position = Vector2( 1309, 313 )
+
+[node name="player" parent="y_sort" index="4"]
+position = Vector2( 79, 176 )
+
+[node name="dummy_enemy" parent="y_sort" index="5" instance=ExtResource( 2 )]
+position = Vector2( 287, 182 )
+
+[node name="limit_bottom_right" parent="." index="3"]
+position = Vector2( 1286, 620 )

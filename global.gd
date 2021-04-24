@@ -1,5 +1,62 @@
 extends Node
 
+signal logic_update
+
+enum FACTIONS{
+	NOFACTION,
+	PLAYER,
+	ENEMIES,
+}
+
+var final_boss_defeated = false
+var player_lost = false
+var is_floor_finished = false
+var show_items = false
+
+var current_floor_number = 0
+
+var player
+var camera : Camera2D
+var current_level_ysort : YSort
+
+var item_flags = []
+
+func do_logic_update():
+	emit_signal("logic_update")
+
+func set_item_flag(item_name):
+	if not item_flags.has(item_name):
+		item_flags.append(item_name)
+
+func get_item_flag(item_name):
+	return item_flags.has(item_name)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# BOILERPLATE
+
 var muted = false
 
 func _unhandled_input(event):

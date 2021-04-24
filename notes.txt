@@ -1,5 +1,26 @@
 TODO
-  chores
+  "you win" floor
+
+  more items
+    heracles's oar
+    food item to restore health
+  more floors
+
+  more enemies
+    hoplite
+  more obstacles
+
+
+
+  screenshake
+  floor to floor debt?
+
+
+THE MINOTOAD
+
+Minos
+Minas Tirith
+
 
 main menu hints system?
   f11 to toggle fullscreen!

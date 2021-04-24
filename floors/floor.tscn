@@ -1,0 +1,74 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://floors/floor.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://ladder_down.tscn" type="PackedScene" id=3]
+[ext_resource path="res://player.tscn" type="PackedScene" id=4]
+
+[sub_resource type="PhysicsMaterial" id=3]
+friction = 0.1
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 325, 31 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 31, 221 )
+
+[node name="floor" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="ladder_down" parent="." instance=ExtResource( 3 )]
+
+[node name="y_sort" type="YSort" parent="."]
+
+[node name="wall_top" type="StaticBody2D" parent="y_sort"]
+position = Vector2( 314, 30 )
+physics_material_override = SubResource( 3 )
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="y_sort/wall_top"]
+shape = SubResource( 1 )
+
+[node name="icon" type="Sprite" parent="y_sort/wall_top"]
+scale = Vector2( 9.5, 1 )
+texture = ExtResource( 2 )
+
+[node name="wall_bottom" type="StaticBody2D" parent="y_sort"]
+position = Vector2( 314, 328 )
+physics_material_override = SubResource( 3 )
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="y_sort/wall_bottom"]
+shape = SubResource( 1 )
+
+[node name="icon" type="Sprite" parent="y_sort/wall_bottom"]
+scale = Vector2( 9.5, 1 )
+texture = ExtResource( 2 )
+
+[node name="wall_left" type="StaticBody2D" parent="y_sort"]
+position = Vector2( 22, 160 )
+physics_material_override = SubResource( 3 )
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="y_sort/wall_left"]
+shape = SubResource( 2 )
+
+[node name="icon" type="Sprite" parent="y_sort/wall_left"]
+scale = Vector2( 1, 6 )
+texture = ExtResource( 2 )
+
+[node name="wall_right" type="StaticBody2D" parent="y_sort"]
+position = Vector2( 608, 160 )
+physics_material_override = SubResource( 3 )
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="y_sort/wall_right"]
+shape = SubResource( 2 )
+
+[node name="icon" type="Sprite" parent="y_sort/wall_right"]
+scale = Vector2( 1, 6 )
+texture = ExtResource( 2 )
+
+[node name="player" parent="y_sort" instance=ExtResource( 4 )]
+position = Vector2( 308, 166 )
+
+[node name="limit_top_left" type="Position2D" parent="."]
+
+[node name="limit_bottom_right" type="Position2D" parent="."]
+position = Vector2( 640, 360 )
