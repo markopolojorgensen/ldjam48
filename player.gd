@@ -5,6 +5,13 @@ func _ready():
 	global.player = self
 	global.camera = $camera_2d
 
+func _process(_delta):
+	if $ouch_duration.is_stopped():
+		if $intended_direction.get_intended_direction().length() > 0.02:
+			$sprite.play("walk")
+		else:
+			$sprite.play("idle")
+
 func _integrate_forces(state):
 	$movement.do_movement(state)
 	
@@ -28,3 +35,9 @@ func hit_by_horns():
 		queue_free()
 		global.player_lost = true
 		global.do_logic_update()
+	
+	$sprite.play("ouch")
+	$ouch_duration.start()
+
+func triggers_aggro():
+	return true

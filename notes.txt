@@ -1,30 +1,105 @@
 TODO
-  "you win" floor
+  weapon knockback
 
-  more items
-    heracles's oar
-    food item to restore health
   more floors
-
+    FROGGER traffic run
+    ring around the rosie
+    lucky horseshoe
+    danger zone (surrounded!)
+    red rover red rover (enemies that bounce between walls)
   more enemies
     hoplite
+    floaty toad
+    toad in a hole
+    poison mushroom
+    toady
+    trapdoor mimic
   more obstacles
+    rolling boulders / rolling spike balls?
+
+
 
 
 
   screenshake
+    when pillars are destroyed
+    when enemies are defeated
   floor to floor debt?
 
+  pause
+    item list
+    buttons for mute & unmute
 
-THE MINOTOAD
+
+
+ENEMIES
+  enemy dimensions
+    speed (fast vs slow)
+    damage area (big aoe vs small aoe vs single target)
+    damage (heavy hitter vs lightweight vs dots)
+    mode of movement (walk, fly, stationary, jump)
+    health (high vs low)
+
+  THE MINOTOAD
+    fast moving heavy hitter who walks and runs
+    high health
+
+  hoplite
+    fast moving lightweight high damage jumper
+    low health
+
+  dummy
+    stationary no-damage blobs that get in the way
+    low health
+
+  floaty toad?
+    slow moving heavy hitter that flies
+    high health
+
+  toad-in-a-hole
+    stationary small-aoe low damage enemy that hides in between attacks
+    low health
+
+  toady
+    slow-moving single target low damage walkers that stick out their tongue at you
+    low health
+
+  poison mushroom
+    stationary big aoe low damage dot poison-cloud-emitter
+    low health
+
+  phalanx of doom
+    slow moving low damage single target walker that links up with other phalanxes to form a shield wall
+    high health
+
+  retaliator
+    only attacks you when you attack them
+
+
+
+ITEMS
+  more items
+    heracles's oar
+    food item to restore health
+    frogspawn
+    golden fleece
+      invisible?
+    dragon's teeth
+    cat-tail of destiny
+  initial item select room
+  random item spawns
+  item tutorial room
+
+
+
+
+
 
 Minos
 Minas Tirith
 
 
 main menu hints system?
-  f11 to toggle fullscreen!
-  m to mute
 
 resolution
   should be a divisor of 1920x1080
@@ -96,6 +171,7 @@ potential theme ideas
 
 post-jam todo
   REMOVE INSTAQUIT
+  REMOVE slowmo mode
   
   make builds
   test builds

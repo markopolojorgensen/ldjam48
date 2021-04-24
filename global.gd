@@ -13,10 +13,13 @@ var player_lost = false
 var is_floor_finished = false
 var show_items = false
 
-var current_floor_number = 0
+var tutorial_skip = false
 
 var player
 var camera : Camera2D
+
+var current_floor_number = 0
+var current_level
 var current_level_ysort : YSort
 
 var item_flags = []
@@ -72,6 +75,12 @@ func _unhandled_input(event):
 	
 	if event.is_action_pressed("screenshot"):
 		screenshot()
+	
+	if event.is_action_pressed("slowmo"):
+		if Engine.time_scale != 1:
+			Engine.time_scale = 1
+		else:
+			Engine.time_scale = 0.3
 
 func update_audio():
 	AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"), muted)

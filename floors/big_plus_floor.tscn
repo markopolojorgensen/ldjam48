@@ -1,0 +1,91 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://floors/floor.tscn" type="PackedScene" id=1]
+[ext_resource path="res://floors/obstacles/pillar_obstacle.tscn" type="PackedScene" id=2]
+
+[node name="big_plus_floor" instance=ExtResource( 1 )]
+
+[node name="ladder_down" parent="." index="0"]
+position = Vector2( 702, 410 )
+
+[node name="wall_bottom" parent="y_sort" index="1"]
+position = Vector2( 314, 471 )
+
+[node name="wall_right" parent="y_sort" index="3"]
+position = Vector2( 785, 160 )
+
+[node name="player" parent="y_sort" index="4"]
+position = Vector2( 95, 105 )
+
+[node name="obstacle_ysort" type="YSort" parent="y_sort" index="5"]
+
+[node name="pillar_obstacle" parent="y_sort/obstacle_ysort" index="0" instance=ExtResource( 2 )]
+position = Vector2( 379, 231 )
+
+[node name="pillar_obstacle2" parent="y_sort/obstacle_ysort" index="1" instance=ExtResource( 2 )]
+position = Vector2( 424, 233 )
+
+[node name="pillar_obstacle17" parent="y_sort/obstacle_ysort" index="2" instance=ExtResource( 2 )]
+position = Vector2( 380, 138 )
+
+[node name="pillar_obstacle18" parent="y_sort/obstacle_ysort" index="3" instance=ExtResource( 2 )]
+position = Vector2( 425, 140 )
+
+[node name="pillar_obstacle19" parent="y_sort/obstacle_ysort" index="4" instance=ExtResource( 2 )]
+position = Vector2( 379, 366 )
+
+[node name="pillar_obstacle20" parent="y_sort/obstacle_ysort" index="5" instance=ExtResource( 2 )]
+position = Vector2( 424, 368 )
+
+[node name="pillar_obstacle3" parent="y_sort/obstacle_ysort" index="6" instance=ExtResource( 2 )]
+position = Vector2( 380, 184 )
+
+[node name="pillar_obstacle4" parent="y_sort/obstacle_ysort" index="7" instance=ExtResource( 2 )]
+position = Vector2( 425, 186 )
+
+[node name="pillar_obstacle5" parent="y_sort/obstacle_ysort" index="8" instance=ExtResource( 2 )]
+position = Vector2( 379, 277 )
+
+[node name="pillar_obstacle6" parent="y_sort/obstacle_ysort" index="9" instance=ExtResource( 2 )]
+position = Vector2( 424, 279 )
+
+[node name="pillar_obstacle7" parent="y_sort/obstacle_ysort" index="10" instance=ExtResource( 2 )]
+position = Vector2( 379, 321 )
+
+[node name="pillar_obstacle8" parent="y_sort/obstacle_ysort" index="11" instance=ExtResource( 2 )]
+position = Vector2( 424, 323 )
+
+[node name="pillar_obstacle9" parent="y_sort/obstacle_ysort" index="12" instance=ExtResource( 2 )]
+position = Vector2( 333, 232 )
+
+[node name="pillar_obstacle10" parent="y_sort/obstacle_ysort" index="13" instance=ExtResource( 2 )]
+position = Vector2( 332, 276 )
+
+[node name="pillar_obstacle11" parent="y_sort/obstacle_ysort" index="14" instance=ExtResource( 2 )]
+position = Vector2( 287, 231 )
+
+[node name="pillar_obstacle12" parent="y_sort/obstacle_ysort" index="15" instance=ExtResource( 2 )]
+position = Vector2( 286, 275 )
+
+[node name="pillar_obstacle13" parent="y_sort/obstacle_ysort" index="16" instance=ExtResource( 2 )]
+position = Vector2( 472, 239 )
+
+[node name="pillar_obstacle14" parent="y_sort/obstacle_ysort" index="17" instance=ExtResource( 2 )]
+position = Vector2( 471, 283 )
+
+[node name="pillar_obstacle15" parent="y_sort/obstacle_ysort" index="18" instance=ExtResource( 2 )]
+position = Vector2( 520, 239 )
+
+[node name="pillar_obstacle16" parent="y_sort/obstacle_ysort" index="19" instance=ExtResource( 2 )]
+position = Vector2( 519, 283 )
+
+[node name="pillar_obstacle21" parent="y_sort/obstacle_ysort" index="20" instance=ExtResource( 2 )]
+position = Vector2( 567, 261 )
+
+[node name="pillar_obstacle22" parent="y_sort/obstacle_ysort" index="21" instance=ExtResource( 2 )]
+position = Vector2( 243, 253 )
+
+[node name="enemy_ysort" type="YSort" parent="y_sort" index="6"]
+
+[node name="limit_bottom_right" parent="." index="3"]
+position = Vector2( 813, 499 )

@@ -1,37 +1,70 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://enemies/enemy.tscn" type="PackedScene" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://external/aseprite/dummy.png" type="Texture" id=2]
 [ext_resource path="res://enemies/dummy_enemy.gd" type="Script" id=3]
+[ext_resource path="res://external/aseprite/enemies/dummy/ouch_frames/aseprite_frames/ouch_02.png" type="Texture" id=4]
+[ext_resource path="res://external/aseprite/enemies/dummy/ouch_frames/aseprite_frames/ouch_00.png" type="Texture" id=5]
+[ext_resource path="res://external/aseprite/enemies/dummy/ouch_frames/aseprite_frames/ouch_01.png" type="Texture" id=6]
+[ext_resource path="res://external/aseprite/enemies/dummy/ouch_frames/aseprite_frames/ouch_05.png" type="Texture" id=7]
+[ext_resource path="res://external/aseprite/enemies/dummy/ouch_frames/aseprite_frames/ouch_15.png" type="Texture" id=8]
+[ext_resource path="res://external/aseprite/enemies/dummy/ouch_frames/aseprite_frames/ouch_06.png" type="Texture" id=9]
+[ext_resource path="res://external/aseprite/enemies/dummy/ouch_frames/aseprite_frames/ouch_12.png" type="Texture" id=10]
+[ext_resource path="res://external/aseprite/enemies/dummy/ouch_frames/aseprite_frames/ouch_18.png" type="Texture" id=11]
+[ext_resource path="res://external/aseprite/enemies/dummy/ouch_frames/aseprite_frames/ouch_10.png" type="Texture" id=12]
+[ext_resource path="res://external/aseprite/enemies/dummy/ouch_frames/aseprite_frames/ouch_16.png" type="Texture" id=13]
+[ext_resource path="res://external/aseprite/enemies/dummy/ouch_frames/aseprite_frames/ouch_07.png" type="Texture" id=14]
+[ext_resource path="res://external/aseprite/enemies/dummy/ouch_frames/aseprite_frames/ouch_08.png" type="Texture" id=15]
+[ext_resource path="res://external/aseprite/enemies/dummy/ouch_frames/aseprite_frames/ouch_13.png" type="Texture" id=16]
+[ext_resource path="res://external/aseprite/enemies/dummy/ouch_frames/aseprite_frames/ouch_09.png" type="Texture" id=17]
+[ext_resource path="res://external/aseprite/enemies/dummy/ouch_frames/aseprite_frames/ouch_14.png" type="Texture" id=18]
+[ext_resource path="res://external/aseprite/enemies/dummy/ouch_frames/aseprite_frames/ouch_17.png" type="Texture" id=19]
+[ext_resource path="res://external/aseprite/enemies/dummy/ouch_frames/aseprite_frames/ouch_19.png" type="Texture" id=20]
+[ext_resource path="res://external/aseprite/enemies/dummy/ouch_frames/aseprite_frames/ouch_04.png" type="Texture" id=21]
+[ext_resource path="res://external/aseprite/enemies/dummy/ouch_frames/aseprite_frames/ouch_11.png" type="Texture" id=22]
+[ext_resource path="res://external/aseprite/enemies/dummy/ouch_frames/aseprite_frames/ouch_03.png" type="Texture" id=23]
+[ext_resource path="res://external/aseprite/enemies/dummy/dummy_base.png" type="Texture" id=24]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 2 ) ],
 "loop": true,
-"name": "default",
+"name": "idle",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 4 ), ExtResource( 23 ), ExtResource( 21 ), ExtResource( 7 ), ExtResource( 9 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 17 ), ExtResource( 12 ), ExtResource( 22 ), ExtResource( 10 ), ExtResource( 16 ), ExtResource( 18 ), ExtResource( 8 ), ExtResource( 13 ), ExtResource( 19 ), ExtResource( 11 ), ExtResource( 20 ) ],
+"loop": false,
+"name": "ouch",
+"speed": 60.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 16, 5 )
+extents = Vector2( 5, 5 )
 
 [node name="dummy_enemy" instance=ExtResource( 1 )]
 script = ExtResource( 3 )
 
-[node name="animated_sprite" parent="." index="0"]
-position = Vector2( 0, -15 )
-scale = Vector2( 0.5, 0.5 )
+[node name="sprite" type="Sprite" parent="." index="0"]
+position = Vector2( 0, -8 )
+texture = ExtResource( 24 )
+
+[node name="animated_sprite" parent="." index="1"]
+position = Vector2( 0, -8 )
 frames = SubResource( 1 )
+animation = "idle"
 
-[node name="health_bar" parent="." index="1"]
+[node name="health_bar" parent="." index="2"]
 margin_left = -12.0
-margin_top = -35.0
+margin_top = -27.0
 margin_right = 12.0
-margin_bottom = -32.0
-current_health = 5.0
+margin_bottom = -24.0
 
-[node name="collision_shape_2d" type="CollisionShape2D" parent="." index="2"]
+[node name="collision_shape_2d" type="CollisionShape2D" parent="." index="3"]
+position = Vector2( 0, -1 )
 shape = SubResource( 2 )
 
-[node name="tied_up_sprite" parent="." index="4"]
-position = Vector2( -1.13687e-13, -40 )
+[node name="tied_up_sprite" parent="." index="5"]
+position = Vector2( -1.35525e-20, -33 )
+
+[node name="ouch_duration" parent="." index="6"]
+wait_time = 0.4

@@ -1,12 +1,12 @@
 extends Node2D
 
-export(int) var swing_radius = 5
+export(int) var swing_radius = 10
 
 var is_swinging = false
 var from_angle
 var to_angle
 var swing_time = 0
-export(float) var total_swing_time = 0.3
+export(float) var total_swing_time = 0.25
 
 export(NodePath) var direction_path
 onready var intended_direction : IntendedDirection = get_node(direction_path)
@@ -41,6 +41,7 @@ func _unhandled_input(event):
 		sword.swing = self
 		sword.faction = global.FACTIONS.PLAYER
 		global.current_level_ysort.add_child(sword)
+		_process(0)
 		
 
 

@@ -87,5 +87,3 @@ func _on_update_interval_timeout():
 	$update_interval.wait_time = rand_range(min_interval, max_interval)
 	$update_interval.start()
 
-
-

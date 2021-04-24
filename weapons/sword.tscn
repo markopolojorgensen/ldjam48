@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://weapons/sword.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://external/aseprite/weapons/sword.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 19, 3 )
+extents = Vector2( 16, 3 )
 
 [node name="sword" type="Node2D"]
 script = ExtResource( 1 )
@@ -17,12 +17,13 @@ collision_layer = 0
 collision_mask = 6
 
 [node name="collision_shape_2d" type="CollisionShape2D" parent="offset/area_2d"]
-position = Vector2( 19, 3 )
+position = Vector2( 16, 1 )
 shape = SubResource( 1 )
 
 [node name="icon" type="Sprite" parent="offset"]
-scale = Vector2( 0.6, 0.1 )
+position = Vector2( 16, 1 )
+rotation = 1.5708
 texture = ExtResource( 2 )
-centered = false
+flip_h = true
 
 [connection signal="body_entered" from="offset/area_2d" to="." method="_on_area_2d_body_entered"]

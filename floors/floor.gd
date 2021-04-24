@@ -5,11 +5,14 @@ func _ready():
 	global.connect("logic_update", self, "logic_update")
 	
 	global.current_level_ysort = $y_sort
+	global.current_level = self
 	
 	(global.camera as Camera2D).limit_top = $limit_top_left.global_position.y
 	(global.camera as Camera2D).limit_left = $limit_top_left.global_position.x
 	(global.camera as Camera2D).limit_bottom = $limit_bottom_right.global_position.y
 	(global.camera as Camera2D).limit_right = $limit_bottom_right.global_position.x
+	
+	logic_update()
 
 func get_enemy_count():
 	var count = 0
