@@ -1,0 +1,60 @@
+[gd_scene load_steps=39 format=2]
+
+[ext_resource path="res://fx/generic_oneoff_fx.tscn" type="PackedScene" id=1]
+[ext_resource path="res://external/aseprite/enemies/flyboi/perish/aseprite/flyboi_perish_32.png" type="Texture" id=2]
+[ext_resource path="res://external/aseprite/enemies/flyboi/perish/aseprite/flyboi_perish_17.png" type="Texture" id=3]
+[ext_resource path="res://external/aseprite/enemies/flyboi/perish/aseprite/flyboi_perish_18.png" type="Texture" id=4]
+[ext_resource path="res://external/aseprite/enemies/flyboi/perish/aseprite/flyboi_perish_16.png" type="Texture" id=5]
+[ext_resource path="res://external/aseprite/enemies/flyboi/perish/aseprite/flyboi_perish_19.png" type="Texture" id=6]
+[ext_resource path="res://external/aseprite/enemies/flyboi/perish/aseprite/flyboi_perish_27.png" type="Texture" id=7]
+[ext_resource path="res://external/aseprite/enemies/flyboi/perish/aseprite/flyboi_perish_31.png" type="Texture" id=8]
+[ext_resource path="res://external/aseprite/enemies/flyboi/perish/aseprite/flyboi_perish_34.png" type="Texture" id=9]
+[ext_resource path="res://external/aseprite/enemies/flyboi/perish/aseprite/flyboi_perish_14.png" type="Texture" id=10]
+[ext_resource path="res://external/aseprite/enemies/flyboi/perish/aseprite/flyboi_perish_22.png" type="Texture" id=11]
+[ext_resource path="res://external/aseprite/enemies/flyboi/perish/aseprite/flyboi_perish_13.png" type="Texture" id=12]
+[ext_resource path="res://external/aseprite/enemies/flyboi/perish/aseprite/flyboi_perish_23.png" type="Texture" id=13]
+[ext_resource path="res://external/aseprite/enemies/flyboi/perish/aseprite/flyboi_perish_15.png" type="Texture" id=14]
+[ext_resource path="res://external/aseprite/enemies/flyboi/perish/aseprite/flyboi_perish_25.png" type="Texture" id=15]
+[ext_resource path="res://external/aseprite/enemies/flyboi/perish/aseprite/flyboi_perish_20.png" type="Texture" id=16]
+[ext_resource path="res://external/aseprite/enemies/flyboi/perish/aseprite/flyboi_perish_24.png" type="Texture" id=17]
+[ext_resource path="res://external/aseprite/enemies/flyboi/perish/aseprite/flyboi_perish_26.png" type="Texture" id=18]
+[ext_resource path="res://external/aseprite/enemies/flyboi/perish/aseprite/flyboi_perish_28.png" type="Texture" id=19]
+[ext_resource path="res://external/aseprite/enemies/flyboi/perish/aseprite/flyboi_perish_21.png" type="Texture" id=20]
+[ext_resource path="res://external/aseprite/enemies/flyboi/perish/aseprite/flyboi_perish_29.png" type="Texture" id=21]
+[ext_resource path="res://external/aseprite/enemies/flyboi/perish/aseprite/flyboi_perish_30.png" type="Texture" id=22]
+[ext_resource path="res://external/aseprite/enemies/flyboi/perish/aseprite/flyboi_perish_33.png" type="Texture" id=23]
+[ext_resource path="res://external/aseprite/enemies/flyboi/perish/aseprite/flyboi_perish_01.png" type="Texture" id=24]
+[ext_resource path="res://external/aseprite/enemies/flyboi/perish/aseprite/flyboi_perish_05.png" type="Texture" id=25]
+[ext_resource path="res://external/aseprite/enemies/flyboi/perish/aseprite/flyboi_perish_08.png" type="Texture" id=26]
+[ext_resource path="res://external/aseprite/enemies/flyboi/perish/aseprite/flyboi_perish_09.png" type="Texture" id=27]
+[ext_resource path="res://external/aseprite/enemies/flyboi/perish/aseprite/flyboi_perish_00.png" type="Texture" id=28]
+[ext_resource path="res://external/aseprite/enemies/flyboi/perish/aseprite/flyboi_perish_10.png" type="Texture" id=29]
+[ext_resource path="res://external/aseprite/enemies/flyboi/perish/aseprite/flyboi_perish_02.png" type="Texture" id=30]
+[ext_resource path="res://external/aseprite/enemies/flyboi/perish/aseprite/flyboi_perish_03.png" type="Texture" id=31]
+[ext_resource path="res://external/aseprite/enemies/flyboi/perish/aseprite/flyboi_perish_04.png" type="Texture" id=32]
+[ext_resource path="res://external/aseprite/enemies/flyboi/perish/aseprite/flyboi_perish_06.png" type="Texture" id=33]
+[ext_resource path="res://external/aseprite/enemies/flyboi/perish/aseprite/flyboi_perish_07.png" type="Texture" id=34]
+[ext_resource path="res://external/aseprite/enemies/flyboi/perish/aseprite/flyboi_perish_11.png" type="Texture" id=35]
+[ext_resource path="res://external/aseprite/enemies/flyboi/perish/aseprite/flyboi_perish_12.png" type="Texture" id=36]
+[ext_resource path="res://external/sunvox/sfx/enemy ouch.wav" type="AudioStream" id=37]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 28 ), ExtResource( 24 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 25 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 29 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 14 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 16 ), ExtResource( 20 ), ExtResource( 11 ), ExtResource( 13 ), ExtResource( 17 ), ExtResource( 15 ), ExtResource( 18 ), ExtResource( 7 ), ExtResource( 19 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 8 ), ExtResource( 2 ), ExtResource( 23 ), ExtResource( 9 ) ],
+"loop": false,
+"name": "default",
+"speed": 60.0
+} ]
+
+[node name="fly_perish" instance=ExtResource( 1 )]
+
+[node name="animated_sprite" parent="." index="0"]
+frames = SubResource( 1 )
+
+[node name="audio_stream_player_2d" parent="." index="1"]
+stream = ExtResource( 37 )
+volume_db = -3.0
+pitch_scale = 2.0
+
+[node name="lifetime" parent="." index="2"]
+wait_time = 0.5

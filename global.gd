@@ -8,6 +8,8 @@ enum FACTIONS{
 	ENEMIES,
 }
 
+var front_half = true
+
 var final_boss_defeated = false
 var player_lost = false
 var is_floor_finished = false
@@ -24,6 +26,8 @@ var current_level
 var current_level_ysort : YSort
 
 var item_flags = []
+
+var music_manager
 
 func do_logic_update():
 	emit_signal("logic_update")

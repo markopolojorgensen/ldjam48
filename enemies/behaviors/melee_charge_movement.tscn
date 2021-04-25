@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://enemies/behaviors/melee_charge_movement.gd" type="Script" id=1]
+[ext_resource path="res://external/sunvox/sfx/growl.wav" type="AudioStream" id=2]
 
 [node name="melee_charge_movement" type="Node2D"]
 script = ExtResource( 1 )
@@ -23,6 +24,10 @@ __meta__ = {
 [node name="suspend" type="Timer" parent="."]
 wait_time = 0.4
 one_shot = true
+
+[node name="growl" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 2 )
+max_distance = 600.0
 
 [connection signal="timeout" from="interval" to="." method="_on_interval_timeout"]
 [connection signal="timeout" from="duration" to="." method="_on_duration_timeout"]

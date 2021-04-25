@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/kachingggggggggg.wav-d52d1fb7fa338b7b12a8b1aa6d63ca3f.sample"
+
+[deps]
+
+source_file="res://external/sunvox/sfx/kachingggggggggg.wav"
+dest_files=[ "res://.import/kachingggggggggg.wav-d52d1fb7fa338b7b12a8b1aa6d63ca3f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

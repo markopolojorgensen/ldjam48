@@ -62,7 +62,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="LDJAM48 | markopolodev | ???"
+config/name="LDJAM48 | markopolodev | MINOTOAD"
 run/main_scene="res://game.tscn"
 config/icon="res://icon.png"
 
@@ -103,6 +103,16 @@ texture={
 "size_limit": 0,
 "stream": false,
 "svg/scale": 1.0
+}
+wav={
+"compress/mode": 0,
+"edit/loop": false,
+"edit/normalize": true,
+"edit/trim": true,
+"force/8_bit": false,
+"force/max_rate": false,
+"force/max_rate_hz": 44100,
+"force/mono": false
 }
 
 [input]

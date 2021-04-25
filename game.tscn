@@ -1,4 +1,4 @@
-[gd_scene load_steps=156 format=2]
+[gd_scene load_steps=163 format=2]
 
 [ext_resource path="res://logo_intro.tscn" type="PackedScene" id=1]
 [ext_resource path="res://ldjam48theme.tres" type="Theme" id=2]
@@ -154,6 +154,13 @@
 [ext_resource path="res://external/pfxd/wipe/aseprite_frames/wipe_130.png" type="Texture" id=152]
 [ext_resource path="res://external/pfxd/wipe/aseprite_frames/wipe_104.png" type="Texture" id=153]
 [ext_resource path="res://external/pfxd/wipe/aseprite_frames/wipe_131.png" type="Texture" id=154]
+[ext_resource path="res://external/149092__lepolainyann__frogs.ogg" type="AudioStream" id=155]
+[ext_resource path="res://external/535066__derjuli__frogs.ogg" type="AudioStream" id=156]
+[ext_resource path="res://frog_sounds.gd" type="Script" id=157]
+[ext_resource path="res://external/sunvox/sfx/kachingggggggggg.wav" type="AudioStream" id=158]
+[ext_resource path="res://music_manager.gd" type="Script" id=159]
+[ext_resource path="res://external/sunvox/sfx/music one.ogg" type="AudioStream" id=160]
+[ext_resource path="res://external/sunvox/sfx/music one_b.ogg" type="AudioStream" id=161]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -165,7 +172,6 @@ animations = [ {
 
 [node name="game" type="Node2D"]
 script = ExtResource( 4 )
-skip_to_first_level = true
 
 [node name="font_credit_label" type="RichTextLabel" parent="."]
 visible = false
@@ -295,5 +301,50 @@ one_shot = true
 wait_time = 5.0
 one_shot = true
 
+[node name="frog_sounds" type="Node" parent="."]
+script = ExtResource( 157 )
+
+[node name="audio_stream_player" type="AudioStreamPlayer" parent="frog_sounds"]
+stream = ExtResource( 155 )
+volume_db = -6.0
+bus = "Music"
+
+[node name="audio_stream_player2" type="AudioStreamPlayer" parent="frog_sounds"]
+stream = ExtResource( 156 )
+bus = "Music"
+
+[node name="intro_delay" type="Timer" parent="frog_sounds"]
+wait_time = 2.1
+one_shot = true
+autostart = true
+
+[node name="interval" type="Timer" parent="frog_sounds"]
+wait_time = 20.0
+one_shot = true
+
+[node name="wipe_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 158 )
+
+[node name="music_manager" type="Node" parent="."]
+script = ExtResource( 159 )
+
+[node name="logo_delay" type="Timer" parent="music_manager"]
+wait_time = 2.1
+one_shot = true
+autostart = true
+
+[node name="one" type="AudioStreamPlayer" parent="music_manager"]
+stream = ExtResource( 160 )
+bus = "Music"
+
+[node name="one_b" type="AudioStreamPlayer" parent="music_manager"]
+stream = ExtResource( 161 )
+bus = "Music"
+
 [connection signal="timeout" from="hud/wipe_animation/middle" to="." method="_on_middle_timeout"]
 [connection signal="timeout" from="moment_of_silence" to="." method="_on_moment_of_silence_timeout"]
+[connection signal="finished" from="frog_sounds/audio_stream_player" to="frog_sounds" method="_on_audio_stream_player_finished"]
+[connection signal="finished" from="frog_sounds/audio_stream_player2" to="frog_sounds" method="_on_audio_stream_player2_finished"]
+[connection signal="timeout" from="frog_sounds/intro_delay" to="frog_sounds" method="_on_intro_delay_timeout"]
+[connection signal="timeout" from="frog_sounds/interval" to="frog_sounds" method="_on_interval_timeout"]
+[connection signal="timeout" from="music_manager/logo_delay" to="music_manager" method="_on_logo_delay_timeout"]

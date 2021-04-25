@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/535066__derjuli__frogs.ogg-87804ae27b46bdd04e394e52b7da0033.oggstr"
+
+[deps]
+
+source_file="res://external/535066__derjuli__frogs.ogg"
+dest_files=[ "res://.import/535066__derjuli__frogs.ogg-87804ae27b46bdd04e394e52b7da0033.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

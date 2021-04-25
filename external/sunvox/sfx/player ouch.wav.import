@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/player ouch.wav-fbe408c507961041c7e2befe042e200f.sample"
+
+[deps]
+
+source_file="res://external/sunvox/sfx/player ouch.wav"
+dest_files=[ "res://.import/player ouch.wav-fbe408c507961041c7e2befe042e200f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

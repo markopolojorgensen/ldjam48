@@ -25,6 +25,7 @@ func is_alive():
 
 func hit_by_sword():
 	$ouch_duration.start()
+	$ouch_sound.play()
 	$health_bar.show()
 	$health_bar.modify_health(-5)
 	if $health_bar.current_health <= 0:

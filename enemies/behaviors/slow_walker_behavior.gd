@@ -4,9 +4,14 @@ extends Node2D
 export(NodePath) var body_path
 onready var body : RigidBody2D = get_node(body_path)
 
+export(int) var max_speed = 100
+
 var target
 
 var active = true
+
+func _ready():
+	$top_down_movement.max_speed = max_speed
 
 func integrate_forces(state: Physics2DDirectBodyState):
 	if active:

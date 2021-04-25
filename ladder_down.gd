@@ -11,6 +11,7 @@ func fancy_show():
 	active = true
 	$closed_sprite.hide()
 	$open_sprite.show()
+	$open.play()
 
 func fancy_hide():
 	$closed_sprite.show()

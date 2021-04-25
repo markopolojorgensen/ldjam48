@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=2]
+[gd_scene load_steps=62 format=2]
 
 [ext_resource path="res://external/aseprite/player/frames/player_defeat/aseprite_frames/player_defeat_50.png" type="Texture" id=1]
 [ext_resource path="res://external/aseprite/player/frames/player_defeat/aseprite_frames/player_defeat_23.png" type="Texture" id=2]
@@ -59,6 +59,7 @@
 [ext_resource path="res://external/aseprite/player/frames/player_defeat/aseprite_frames/player_defeat_00.png" type="Texture" id=57]
 [ext_resource path="res://external/aseprite/player/frames/player_defeat/aseprite_frames/player_defeat_01.png" type="Texture" id=58]
 [ext_resource path="res://external/aseprite/player/frames/player_defeat/aseprite_frames/player_defeat_02.png" type="Texture" id=59]
+[ext_resource path="res://external/sunvox/sfx/druminthedeep.wav" type="AudioStream" id=60]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -73,6 +74,9 @@ z_index = 200
 
 [node name="animated_sprite" parent="." index="0"]
 frames = SubResource( 1 )
+
+[node name="audio_stream_player_2d" parent="." index="1"]
+stream = ExtResource( 60 )
 
 [node name="lifetime" parent="." index="2"]
 wait_time = 2.0

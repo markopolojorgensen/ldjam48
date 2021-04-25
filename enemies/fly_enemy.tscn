@@ -1,0 +1,56 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://enemies/enemy.tscn" type="PackedScene" id=1]
+[ext_resource path="res://external/aseprite/enemies/flyboi/flyboi_00.png" type="Texture" id=2]
+[ext_resource path="res://external/aseprite/enemies/flyboi/flyboi_02.png" type="Texture" id=3]
+[ext_resource path="res://external/aseprite/enemies/flyboi/flyboi_03.png" type="Texture" id=4]
+[ext_resource path="res://external/aseprite/enemies/flyboi/flyboi_01.png" type="Texture" id=5]
+[ext_resource path="res://enemies/behaviors/slow_walker_behavior.tscn" type="PackedScene" id=6]
+[ext_resource path="res://enemies/fly_enemy.gd" type="Script" id=7]
+[ext_resource path="res://fx/fly_perish.tscn" type="PackedScene" id=8]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 15.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 6.0
+height = 4.0
+
+[node name="fly_enemy" instance=ExtResource( 1 )]
+collision_mask = 15
+script = ExtResource( 7 )
+perish_fx_scene = ExtResource( 8 )
+
+[node name="animated_sprite" parent="." index="0"]
+position = Vector2( 0, -12 )
+frames = SubResource( 1 )
+
+[node name="health_bar" parent="." index="1"]
+margin_left = -12.0
+margin_top = 8.0
+margin_right = 12.0
+margin_bottom = 11.0
+max_health = 2.0
+current_health = 2.0
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="." index="6"]
+position = Vector2( 0, -3 )
+rotation = 1.5708
+shape = SubResource( 2 )
+
+[node name="slow_walker_behavior" parent="." index="7" instance=ExtResource( 6 )]
+max_speed = 65
+
+[node name="on" type="Timer" parent="." index="8"]
+one_shot = true
+
+[node name="off" type="Timer" parent="." index="9"]
+one_shot = true
+
+[connection signal="timeout" from="on" to="." method="_on_on_timeout"]
+[connection signal="timeout" from="off" to="." method="_on_off_timeout"]

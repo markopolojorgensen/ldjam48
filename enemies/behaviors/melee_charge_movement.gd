@@ -44,6 +44,7 @@ func collision(other_body):
 func _on_interval_timeout():
 	if not is_charging and $suspend.is_stopped():
 		$suspend.start()
+		$growl.play()
 
 func _on_suspend_timeout():
 	if not is_charging:

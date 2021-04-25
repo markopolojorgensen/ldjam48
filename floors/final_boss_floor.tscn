@@ -5,17 +5,18 @@
 [ext_resource path="res://obstacle_tileset.tres" type="TileSet" id=3]
 
 [node name="final_boss_floor" instance=ExtResource( 1 )]
+title_card_text = "The MINITOAD"
 
 [node name="ladder_down" parent="." index="0"]
 position = Vector2( 514, 272 )
 
 [node name="player" parent="y_sort" index="0"]
-position = Vector2( 92, 271 )
+position = Vector2( 367, 272 )
 
 [node name="final_boss" parent="y_sort" index="1" instance=ExtResource( 2 )]
-position = Vector2( 591, 275 )
+position = Vector2( 650, 275 )
 
-[node name="tile_map" type="TileMap" parent="y_sort" index="2"]
+[node name="pillar_tilemap" type="TileMap" parent="y_sort" index="2"]
 tile_set = ExtResource( 3 )
 cell_size = Vector2( 32, 32 )
 cell_tile_origin = 2

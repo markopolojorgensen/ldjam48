@@ -5,6 +5,7 @@
 [ext_resource path="res://ladder_down.tscn" type="PackedScene" id=5]
 
 [node name="tutorial_floor" instance=ExtResource( 1 )]
+title_card_text = "The Tutorial"
 
 [node name="ladder_down" parent="." index="0"]
 position = Vector2( 188, 292 )
@@ -31,23 +32,25 @@ __meta__ = {
 }
 
 [node name="label4" type="Label" parent="tutorial_messages" index="1"]
-margin_left = 65.0
-margin_top = 319.0
-margin_right = 330.0
-margin_bottom = 327.0
+margin_left = 55.0
+margin_top = 258.0
+margin_right = 320.0
+margin_bottom = 266.0
 theme = ExtResource( 3 )
 text = "Use hatches to descend deeper into the MINOTOAD's Labyrinth"
+align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="label5" type="Label" parent="tutorial_messages" index="2"]
-margin_left = 447.0
-margin_top = 318.0
-margin_right = 712.0
-margin_bottom = 326.0
+margin_left = 383.0
+margin_top = 317.0
+margin_right = 648.0
+margin_bottom = 325.0
 theme = ExtResource( 3 )
 text = "(This one skips the rest of the tutorial)"
+align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }

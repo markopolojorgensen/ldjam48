@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/swing.wav-d5a343180734d87d624c5c83137babf9.sample"
+
+[deps]
+
+source_file="res://external/sunvox/sfx/swing.wav"
+dest_files=[ "res://.import/swing.wav-d5a343180734d87d624c5c83137babf9.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

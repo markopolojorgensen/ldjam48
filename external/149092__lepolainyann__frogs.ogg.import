@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/149092__lepolainyann__frogs.ogg-b1a6b63c9d5bd9aa08b96d150b7b82fe.oggstr"
+
+[deps]
+
+source_file="res://external/149092__lepolainyann__frogs.ogg"
+dest_files=[ "res://.import/149092__lepolainyann__frogs.ogg-b1a6b63c9d5bd9aa08b96d150b7b82fe.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

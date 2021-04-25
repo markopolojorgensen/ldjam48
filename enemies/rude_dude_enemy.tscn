@@ -1,0 +1,87 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://enemies/enemy.tscn" type="PackedScene" id=1]
+[ext_resource path="res://enemies/rude_dude_enemy.gd" type="Script" id=2]
+[ext_resource path="res://external/aseprite/enemies/rude_dude/rude_dude_00.png" type="Texture" id=3]
+[ext_resource path="res://external/aseprite/enemies/rude_dude/rude_dude_01.png" type="Texture" id=4]
+[ext_resource path="res://external/aseprite/enemies/rude_dude/rude_dude_03.png" type="Texture" id=5]
+[ext_resource path="res://external/aseprite/enemies/rude_dude/rude_dude_02.png" type="Texture" id=6]
+[ext_resource path="res://fx/lizard_parish.tscn" type="PackedScene" id=7]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 7.0
+height = 10.0
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [  ],
+"loop": false,
+"name": "hide",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": false,
+"name": "ouch",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": false,
+"name": "prep",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": false,
+"name": "fire",
+"speed": 5.0
+} ]
+
+[node name="rude_dude_enemy" instance=ExtResource( 1 )]
+mode = 1
+script = ExtResource( 2 )
+flip_perish = true
+perish_fx_scene = ExtResource( 7 )
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="." index="0"]
+rotation = 1.5708
+shape = SubResource( 2 )
+
+[node name="animated_sprite" parent="." index="1"]
+position = Vector2( 0, -4 )
+frames = SubResource( 1 )
+animation = "ouch"
+
+[node name="health_bar" parent="." index="2"]
+margin_left = -12.0
+margin_right = 12.0
+max_health = 15.0
+current_health = 15.0
+
+[node name="ouch_duration" parent="." index="5"]
+wait_time = 0.4
+
+[node name="hide_duration" type="Timer" parent="." index="7"]
+wait_time = 4.0
+one_shot = true
+
+[node name="prep_duration" type="Timer" parent="." index="8"]
+wait_time = 2.0
+one_shot = true
+
+[node name="shoot_duration" type="Timer" parent="." index="9"]
+one_shot = true
+
+[node name="extra_hide" type="Timer" parent="." index="10"]
+one_shot = true
+
+[node name="sprite" type="Sprite" parent="." index="11"]
+position = Vector2( 0, -4 )
+z_index = -5
+texture = ExtResource( 3 )
+
+[node name="fireball_spawn" type="Position2D" parent="." index="12"]
+position = Vector2( 10, 2 )
+
+[connection signal="timeout" from="hide_duration" to="." method="_on_hide_duration_timeout"]
+[connection signal="timeout" from="prep_duration" to="." method="_on_prep_timeout"]
+[connection signal="timeout" from="shoot_duration" to="." method="_on_shoot_duration_timeout"]
+[connection signal="timeout" from="extra_hide" to="." method="_on_extra_hide_timeout"]

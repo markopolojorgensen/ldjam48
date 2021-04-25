@@ -6,7 +6,7 @@ var is_swinging = false
 var from_angle
 var to_angle
 var swing_time = 0
-export(float) var total_swing_time = 0.25
+export(float) var total_swing_time = 0.2
 
 export(NodePath) var direction_path
 onready var intended_direction : IntendedDirection = get_node(direction_path)

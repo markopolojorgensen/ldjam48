@@ -19,6 +19,8 @@ var max_height = 50
 func _process(_delta):
 	if target and $cooldown.is_stopped() and not is_hopping:
 		is_hopping = true
+		$hop_sfx.pitch_scale = rand_range(0.9, 1.1)
+		$hop_sfx.play()
 		$cooldown.wait_time = rand_range(2.5, 3.5)
 		$cooldown.start()
 		from_position = global_position

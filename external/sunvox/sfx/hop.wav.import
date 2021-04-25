@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/hop.wav-2911a1a1496d6136dd912d1e8c9e3974.sample"
+
+[deps]
+
+source_file="res://external/sunvox/sfx/hop.wav"
+dest_files=[ "res://.import/hop.wav-2911a1a1496d6136dd912d1e8c9e3974.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

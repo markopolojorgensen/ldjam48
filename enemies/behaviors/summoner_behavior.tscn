@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=2]
+[gd_scene load_steps=65 format=2]
 
 [ext_resource path="res://enemies/behaviors/summoner_behavior.gd" type="Script" id=1]
 [ext_resource path="res://enemies/hoplite_enemy.tscn" type="PackedScene" id=2]
@@ -62,8 +62,9 @@
 [ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_01.png" type="Texture" id=60]
 [ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_09.png" type="Texture" id=61]
 [ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_12.png" type="Texture" id=62]
+[ext_resource path="res://external/sunvox/sfx/hummm.ogg" type="AudioStream" id=63]
 
-[sub_resource type="SpriteFrames" id=4]
+[sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 50 ), ExtResource( 60 ), ExtResource( 53 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 51 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 61 ), ExtResource( 59 ), ExtResource( 52 ), ExtResource( 62 ), ExtResource( 46 ), ExtResource( 45 ), ExtResource( 25 ), ExtResource( 34 ), ExtResource( 26 ), ExtResource( 20 ), ExtResource( 11 ), ExtResource( 3 ), ExtResource( 28 ), ExtResource( 27 ), ExtResource( 12 ), ExtResource( 42 ), ExtResource( 13 ), ExtResource( 35 ), ExtResource( 40 ), ExtResource( 21 ), ExtResource( 47 ), ExtResource( 22 ), ExtResource( 24 ), ExtResource( 19 ), ExtResource( 29 ), ExtResource( 49 ), ExtResource( 14 ), ExtResource( 4 ), ExtResource( 23 ), ExtResource( 41 ), ExtResource( 48 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 36 ), ExtResource( 5 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 18 ), ExtResource( 9 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 10 ) ],
 "loop": true,
@@ -76,13 +77,20 @@ script = ExtResource( 1 )
 enemy_scene = ExtResource( 2 )
 
 [node name="animated_sprite" type="AnimatedSprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 0, -41 )
-frames = SubResource( 4 )
+frames = SubResource( 1 )
 
 [node name="cooldown" type="Timer" parent="."]
 wait_time = 7.0
 
 [node name="duration" type="Timer" parent="."]
+
+[node name="audio_stream_player_2d" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 63 )
+max_distance = 600.0
+
+[node name="tween" type="Tween" parent="."]
 
 [connection signal="timeout" from="cooldown" to="." method="_on_cooldown_timeout"]
 [connection signal="timeout" from="duration" to="." method="_on_duration_timeout"]

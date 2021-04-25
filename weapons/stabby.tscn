@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://external/aseprite/weapons/stabby.png" type="Texture" id=1]
 [ext_resource path="res://weapons/stabby.gd" type="Script" id=2]
+[ext_resource path="res://external/sunvox/sfx/swing.wav" type="AudioStream" id=3]
 
 [sub_resource type="Animation" id=1]
 resource_name = "stab"
@@ -30,9 +31,47 @@ tracks/1/keys = {
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("audio_stream_player_2d:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.58, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("moving_part/area_2d/collision_shape_2d:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.02, 0.63, 0.82 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+tracks/4/type = "method"
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.64 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "do_overlaps"
+} ]
+}
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 2, 2 )
+extents = Vector2( 13, 2 )
 
 [node name="stabby" type="Node2D"]
 script = ExtResource( 2 )
@@ -41,6 +80,7 @@ script = ExtResource( 2 )
 anims/stab = SubResource( 1 )
 
 [node name="moving_part" type="Node2D" parent="."]
+position = Vector2( 6.3, 0 )
 
 [node name="sprite" type="Sprite" parent="moving_part"]
 position = Vector2( 12, 1 )
@@ -48,15 +88,21 @@ texture = ExtResource( 1 )
 
 [node name="area_2d" type="Area2D" parent="moving_part"]
 position = Vector2( 24, 1 )
-collision_layer = 2
+collision_layer = 0
+collision_mask = 2
 
 [node name="collision_shape_2d" type="CollisionShape2D" parent="moving_part/area_2d"]
+position = Vector2( -13, 0 )
 shape = SubResource( 2 )
+disabled = true
 
 [node name="lifetime" type="Timer" parent="."]
 wait_time = 1.1
 one_shot = true
 autostart = true
+
+[node name="audio_stream_player_2d" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
 
 [connection signal="body_entered" from="moving_part/area_2d" to="." method="_on_area_2d_body_entered"]
 [connection signal="timeout" from="lifetime" to="." method="_on_lifetime_timeout"]

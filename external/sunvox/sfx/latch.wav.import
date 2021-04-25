@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/latch.wav-0dcb5dfb2d5a142fc002390efa69e071.sample"
+
+[deps]
+
+source_file="res://external/sunvox/sfx/latch.wav"
+dest_files=[ "res://.import/latch.wav-0dcb5dfb2d5a142fc002390efa69e071.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

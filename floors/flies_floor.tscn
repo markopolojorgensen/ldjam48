@@ -1,0 +1,134 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://enemies/fly_enemy.tscn" type="PackedScene" id=1]
+[ext_resource path="res://floors/floor.tscn" type="PackedScene" id=2]
+[ext_resource path="res://obstacle_tileset.tres" type="TileSet" id=3]
+
+[node name="flies_floor" instance=ExtResource( 2 )]
+
+[node name="ladder_down" parent="." index="0"]
+position = Vector2( 337, 192 )
+
+[node name="pillar_tilemap" type="TileMap" parent="y_sort" index="1"]
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 32, 32 )
+cell_tile_origin = 2
+cell_y_sort = true
+format = 1
+
+[node name="fly_enemy" parent="y_sort" index="2" instance=ExtResource( 1 )]
+position = Vector2( 95, 90 )
+
+[node name="fly_enemy22" parent="y_sort" index="3" instance=ExtResource( 1 )]
+position = Vector2( 81, 143 )
+
+[node name="fly_enemy23" parent="y_sort" index="4" instance=ExtResource( 1 )]
+position = Vector2( 148, 92 )
+
+[node name="fly_enemy24" parent="y_sort" index="5" instance=ExtResource( 1 )]
+position = Vector2( 86, 206 )
+
+[node name="fly_enemy25" parent="y_sort" index="6" instance=ExtResource( 1 )]
+position = Vector2( 182, 122 )
+
+[node name="fly_enemy26" parent="y_sort" index="7" instance=ExtResource( 1 )]
+position = Vector2( 268, 67 )
+
+[node name="fly_enemy27" parent="y_sort" index="8" instance=ExtResource( 1 )]
+position = Vector2( 412, 71 )
+
+[node name="fly_enemy28" parent="y_sort" index="9" instance=ExtResource( 1 )]
+position = Vector2( 501, 68 )
+
+[node name="fly_enemy29" parent="y_sort" index="10" instance=ExtResource( 1 )]
+position = Vector2( 594, 78 )
+
+[node name="fly_enemy30" parent="y_sort" index="11" instance=ExtResource( 1 )]
+position = Vector2( 476, 145 )
+
+[node name="fly_enemy31" parent="y_sort" index="12" instance=ExtResource( 1 )]
+position = Vector2( 455, 237 )
+
+[node name="fly_enemy32" parent="y_sort" index="13" instance=ExtResource( 1 )]
+position = Vector2( 534, 256 )
+
+[node name="fly_enemy33" parent="y_sort" index="14" instance=ExtResource( 1 )]
+position = Vector2( 358, 305 )
+
+[node name="fly_enemy34" parent="y_sort" index="15" instance=ExtResource( 1 )]
+position = Vector2( 204, 320 )
+
+[node name="fly_enemy35" parent="y_sort" index="16" instance=ExtResource( 1 )]
+position = Vector2( 251, 299 )
+
+[node name="fly_enemy36" parent="y_sort" index="17" instance=ExtResource( 1 )]
+position = Vector2( 199, 281 )
+
+[node name="fly_enemy37" parent="y_sort" index="18" instance=ExtResource( 1 )]
+position = Vector2( 160, 289 )
+
+[node name="fly_enemy38" parent="y_sort" index="19" instance=ExtResource( 1 )]
+position = Vector2( 66, 320 )
+
+[node name="fly_enemy39" parent="y_sort" index="20" instance=ExtResource( 1 )]
+position = Vector2( 106, 317 )
+
+[node name="fly_enemy2" parent="y_sort" index="21" instance=ExtResource( 1 )]
+position = Vector2( 199, 81 )
+
+[node name="fly_enemy3" parent="y_sort" index="22" instance=ExtResource( 1 )]
+position = Vector2( 143, 150 )
+
+[node name="fly_enemy4" parent="y_sort" index="23" instance=ExtResource( 1 )]
+position = Vector2( 144, 217 )
+
+[node name="fly_enemy5" parent="y_sort" index="24" instance=ExtResource( 1 )]
+position = Vector2( 92, 281 )
+
+[node name="fly_enemy6" parent="y_sort" index="25" instance=ExtResource( 1 )]
+position = Vector2( 141, 318 )
+
+[node name="fly_enemy7" parent="y_sort" index="26" instance=ExtResource( 1 )]
+position = Vector2( 267, 322 )
+
+[node name="fly_enemy8" parent="y_sort" index="27" instance=ExtResource( 1 )]
+position = Vector2( 454, 314 )
+
+[node name="fly_enemy9" parent="y_sort" index="28" instance=ExtResource( 1 )]
+position = Vector2( 558, 315 )
+
+[node name="fly_enemy10" parent="y_sort" index="29" instance=ExtResource( 1 )]
+position = Vector2( 579, 243 )
+
+[node name="fly_enemy11" parent="y_sort" index="30" instance=ExtResource( 1 )]
+position = Vector2( 588, 142 )
+
+[node name="fly_enemy12" parent="y_sort" index="31" instance=ExtResource( 1 )]
+position = Vector2( 540, 82 )
+
+[node name="fly_enemy13" parent="y_sort" index="32" instance=ExtResource( 1 )]
+position = Vector2( 445, 63 )
+
+[node name="fly_enemy14" parent="y_sort" index="33" instance=ExtResource( 1 )]
+position = Vector2( 351, 60 )
+
+[node name="fly_enemy15" parent="y_sort" index="34" instance=ExtResource( 1 )]
+position = Vector2( 351, 60 )
+
+[node name="fly_enemy16" parent="y_sort" index="35" instance=ExtResource( 1 )]
+position = Vector2( 498, 205 )
+
+[node name="fly_enemy17" parent="y_sort" index="36" instance=ExtResource( 1 )]
+position = Vector2( 526, 162 )
+
+[node name="fly_enemy18" parent="y_sort" index="37" instance=ExtResource( 1 )]
+position = Vector2( 493, 290 )
+
+[node name="fly_enemy19" parent="y_sort" index="38" instance=ExtResource( 1 )]
+position = Vector2( 398, 271 )
+
+[node name="fly_enemy20" parent="y_sort" index="39" instance=ExtResource( 1 )]
+position = Vector2( 304, 268 )
+
+[node name="fly_enemy21" parent="y_sort" index="40" instance=ExtResource( 1 )]
+position = Vector2( 304, 268 )

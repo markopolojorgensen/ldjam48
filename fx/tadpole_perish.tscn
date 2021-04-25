@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=2]
+[gd_scene load_steps=45 format=2]
 
 [ext_resource path="res://fx/generic_oneoff_fx.tscn" type="PackedScene" id=1]
 [ext_resource path="res://external/aseprite/enemies/tadpole/defeat/aseprite_frames/defeat_36.png" type="Texture" id=2]
@@ -42,6 +42,7 @@
 [ext_resource path="res://external/aseprite/enemies/tadpole/defeat/aseprite_frames/defeat_10.png" type="Texture" id=40]
 [ext_resource path="res://external/aseprite/enemies/tadpole/defeat/aseprite_frames/defeat_17.png" type="Texture" id=41]
 [ext_resource path="res://external/aseprite/enemies/tadpole/defeat/aseprite_frames/defeat_27.png" type="Texture" id=42]
+[ext_resource path="res://external/sunvox/sfx/druminthedeep.wav" type="AudioStream" id=43]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -56,3 +57,7 @@ animations = [ {
 [node name="animated_sprite" parent="." index="0"]
 frames = SubResource( 1 )
 offset = Vector2( -18, 0 )
+
+[node name="audio_stream_player_2d" parent="." index="1"]
+stream = ExtResource( 43 )
+volume_db = -3.0

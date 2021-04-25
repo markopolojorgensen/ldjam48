@@ -1,14 +1,35 @@
 TODO
 
-  music
-  sfx
-  take damage more obviously
-  new title screen & new title
-  more floors
-  more enemies
-  items???
-  boss title cards
 
+    1 hour
+      more enemies
+
+  4 hours
+    1.5 hour
+      more floors
+        tadpole???
+    1 hour
+      music
+    1 hours
+      dash / dodge cartwheel
+      bigger player health bar
+      ???
+
+
+
+  music
+  items???
+  sfx
+
+
+
+enemies:
+  fly
+  rude
+  hoplite
+
+  tadpole
+  minotoad
 
 
   more floors

@@ -41,19 +41,43 @@ func get_faction():
 	return global.FACTIONS.PLAYER
 
 func hit_by_horns():
-	$canvas_layer/margin_container/health_bar.modify_health(-10)
-	if $canvas_layer/margin_container/health_bar.current_health <= 0:
-		call_deferred("perish")
-	
-	$sprite.play("ouch")
-	$ouch_duration.start()
+	if $invuln_cooldown.is_stopped():
+		$canvas_layer/margin_container/health_bar.modify_health(-10)
+		ouch()
 
 func hit_by_hoplite_slam(_slam):
-	$canvas_layer/margin_container/health_bar.modify_health(-2)
+	if $invuln_cooldown.is_stopped():
+		$canvas_layer/margin_container/health_bar.modify_health(-3)
+		ouch()
+
+func hit_by_fly(_fly):
+	if $invuln_cooldown.is_stopped():
+		$canvas_layer/margin_container/health_bar.modify_health(-1)
+		ouch()
+
+func stabbed(_stabby):
+	if $invuln_cooldown.is_stopped():
+		$canvas_layer/margin_container/health_bar.modify_health(-5)
+		ouch()
+
+func hit_by_fireball(_fireball):
+	if $invuln_cooldown.is_stopped():
+		$canvas_layer/margin_container/health_bar.modify_health(-8)
+		ouch()
+
+func ouch():
+	if global.player_lost:
+		return
+	
+	$ouch_sound.stop()
+	$ouch_sound.play()
 	if $canvas_layer/margin_container/health_bar.current_health <= 0:
 		call_deferred("perish")
+	$invuln_cooldown.start()
 	$sprite.play("ouch")
 	$ouch_duration.start()
+	$ouch_time.interpolate_property(Engine, "time_scale", 0.1, 1, 1, Tween.TRANS_QUART, Tween.EASE_OUT)
+	$ouch_time.start()
 
 func perish():
 	if global.player_lost:
@@ -70,3 +94,8 @@ func perish():
 
 func triggers_aggro():
 	return true
+
+func _on_sprite_frame_changed():
+	if $sprite.animation == "walk":
+		$footstep.pitch_scale = rand_range(0.9, 1.1)
+		$footstep.play()

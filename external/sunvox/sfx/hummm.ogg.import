@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/hummm.ogg-19c449059b61a7e25913a8aa9a61193c.oggstr"
+
+[deps]
+
+source_file="res://external/sunvox/sfx/hummm.ogg"
+dest_files=[ "res://.import/hummm.ogg-19c449059b61a7e25913a8aa9a61193c.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

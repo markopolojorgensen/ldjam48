@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
+[ext_resource path="res://external/sunvox/sfx/hop.wav" type="AudioStream" id=1]
 [ext_resource path="res://enemies/behaviors/hop_behavior.gd" type="Script" id=2]
 [ext_resource path="res://_addons/aggro/aggro.tscn" type="PackedScene" id=3]
 
@@ -33,6 +34,10 @@ one_shot = true
 [node name="suspend_duration" type="Timer" parent="."]
 wait_time = 0.7
 one_shot = true
+
+[node name="hop_sfx" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 1 )
+max_distance = 600.0
 
 [connection signal="aggro" from="aggro" to="." method="_on_aggro_aggro"]
 [connection signal="aggro_lost" from="aggro" to="." method="_on_aggro_aggro_lost"]

@@ -12,6 +12,10 @@ func _on_area_2d_body_entered(body):
 	else:
 		print("stabby failed to stab %s" % body.name)
 
+func do_overlaps():
+	for body in $moving_part/area_2d.get_overlapping_bodies():
+		_on_area_2d_body_entered(body)
+
 func _on_lifetime_timeout():
 	queue_free()
 

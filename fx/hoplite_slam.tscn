@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://fx/hoplite_slam.gd" type="Script" id=1]
 [ext_resource path="res://external/pfxd/slam_burst/aseprite_frames/slam_burst_22.png" type="Texture" id=2]
@@ -34,6 +34,7 @@
 [ext_resource path="res://external/pfxd/slam_burst/aseprite_frames/slam_burst_23.png" type="Texture" id=32]
 [ext_resource path="res://external/pfxd/slam_burst/aseprite_frames/slam_burst_29.png" type="Texture" id=33]
 [ext_resource path="res://external/pfxd/slam_burst/aseprite_frames/slam_burst_01.png" type="Texture" id=34]
+[ext_resource path="res://external/sunvox/sfx/doof.wav" type="AudioStream" id=35]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -69,6 +70,10 @@ collision_mask = 2
 
 [node name="collision_shape_2d" type="CollisionShape2D" parent="area_2d"]
 shape = SubResource( 2 )
+
+[node name="audio_stream_player_2d" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 35 )
+max_distance = 600.0
 
 [connection signal="timeout" from="lifetime" to="." method="_on_lifetime_timeout"]
 [connection signal="timeout" from="slam_duration" to="." method="_on_slam_duration_timeout"]
