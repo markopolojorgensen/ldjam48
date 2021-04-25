@@ -2,7 +2,7 @@ extends Enemy
 
 func _ready():
 	._ready()
-	$horns.faction = global.FACTIONS.ENEMIES
+	$horns_behavior.faction = global.FACTIONS.ENEMIES
 
 func _process(_delta):
 	$animated_sprite.rotation = 0
@@ -11,7 +11,7 @@ func _process(_delta):
 		$animated_sprite.play("charge")
 	elif not $ouch_duration.is_stopped():
 		$animated_sprite.play("ouch")
-	elif linear_velocity.length() > 0.02:
+	elif linear_velocity.length() > 0.1:
 		$animated_sprite.play("walk")
 		if linear_velocity.x < 0:
 			$animated_sprite.flip_h = true

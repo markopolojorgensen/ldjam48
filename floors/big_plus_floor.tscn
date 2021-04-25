@@ -1,15 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://floors/floor.tscn" type="PackedScene" id=1]
 [ext_resource path="res://floors/obstacles/pillar_obstacle.tscn" type="PackedScene" id=2]
-[ext_resource path="res://external/aseprite/walls_00.png" type="Texture" id=3]
 [ext_resource path="res://enemies/hoplite_enemy.tscn" type="PackedScene" id=4]
-
-[sub_resource type="PhysicsMaterial" id=1]
-friction = 0.1
-
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 24, 24 )
 
 [node name="big_plus_floor" instance=ExtResource( 1 )]
 
@@ -19,198 +12,7 @@ position = Vector2( 680, 328 )
 [node name="player" parent="y_sort" index="0"]
 position = Vector2( 95, 105 )
 
-[node name="wall_top25" parent="y_sort/walls" index="1"]
-position = Vector2( 840, 72 )
-
-[node name="wall_top26" parent="y_sort/walls" index="2"]
-position = Vector2( 840, 120 )
-
-[node name="wall_top27" parent="y_sort/walls" index="3"]
-position = Vector2( 840, 168 )
-
-[node name="wall_top28" parent="y_sort/walls" index="4"]
-position = Vector2( 840, 216 )
-
-[node name="wall_top29" parent="y_sort/walls" index="5"]
-position = Vector2( 840, 264 )
-
-[node name="wall_top30" parent="y_sort/walls" index="6"]
-position = Vector2( 840, 312 )
-
-[node name="wall_top_left_corner2" parent="y_sort/walls" index="25"]
-position = Vector2( 840, 24 )
-
-[node name="wall_top13" parent="y_sort/walls" index="26"]
-position = Vector2( 72, 456 )
-
-[node name="wall_top14" parent="y_sort/walls" index="27"]
-position = Vector2( 120, 456 )
-
-[node name="wall_top15" parent="y_sort/walls" index="28"]
-position = Vector2( 168, 456 )
-
-[node name="wall_top16" parent="y_sort/walls" index="29"]
-position = Vector2( 216, 456 )
-
-[node name="wall_top17" parent="y_sort/walls" index="30"]
-position = Vector2( 264, 456 )
-
-[node name="wall_top18" parent="y_sort/walls" index="31"]
-position = Vector2( 312, 456 )
-
-[node name="wall_top19" parent="y_sort/walls" index="32"]
-position = Vector2( 360, 456 )
-
-[node name="wall_top20" parent="y_sort/walls" index="33"]
-position = Vector2( 408, 456 )
-
-[node name="wall_top21" parent="y_sort/walls" index="34"]
-position = Vector2( 456, 456 )
-
-[node name="wall_top22" parent="y_sort/walls" index="35"]
-position = Vector2( 504, 456 )
-
-[node name="wall_top23" parent="y_sort/walls" index="36"]
-position = Vector2( 552, 456 )
-
-[node name="wall_top24" parent="y_sort/walls" index="37"]
-position = Vector2( 600, 456 )
-
-[node name="wall_top_left_corner3" parent="y_sort/walls" index="38"]
-position = Vector2( 24, 456 )
-
-[node name="wall_top_left_corner4" parent="y_sort/walls" index="39"]
-position = Vector2( 840, 456 )
-
-[node name="wall_top37" type="StaticBody2D" parent="y_sort/walls" index="40"]
-position = Vector2( 648, 24 )
-physics_material_override = SubResource( 1 )
-
-[node name="collision_shape_2d" type="CollisionShape2D" parent="y_sort/walls/wall_top37" index="0"]
-shape = SubResource( 2 )
-
-[node name="icon" type="Sprite" parent="y_sort/walls/wall_top37" index="1"]
-texture = ExtResource( 3 )
-
-[node name="wall_top38" type="StaticBody2D" parent="y_sort/walls" index="41"]
-position = Vector2( 696, 24 )
-physics_material_override = SubResource( 1 )
-
-[node name="collision_shape_2d" type="CollisionShape2D" parent="y_sort/walls/wall_top38" index="0"]
-shape = SubResource( 2 )
-
-[node name="icon" type="Sprite" parent="y_sort/walls/wall_top38" index="1"]
-texture = ExtResource( 3 )
-
-[node name="wall_top39" type="StaticBody2D" parent="y_sort/walls" index="42"]
-position = Vector2( 744, 24 )
-physics_material_override = SubResource( 1 )
-
-[node name="collision_shape_2d" type="CollisionShape2D" parent="y_sort/walls/wall_top39" index="0"]
-shape = SubResource( 2 )
-
-[node name="icon" type="Sprite" parent="y_sort/walls/wall_top39" index="1"]
-texture = ExtResource( 3 )
-
-[node name="wall_top40" type="StaticBody2D" parent="y_sort/walls" index="43"]
-position = Vector2( 792, 24 )
-physics_material_override = SubResource( 1 )
-
-[node name="collision_shape_2d" type="CollisionShape2D" parent="y_sort/walls/wall_top40" index="0"]
-shape = SubResource( 2 )
-
-[node name="icon" type="Sprite" parent="y_sort/walls/wall_top40" index="1"]
-texture = ExtResource( 3 )
-
-[node name="wall_top41" type="StaticBody2D" parent="y_sort/walls" index="44"]
-position = Vector2( 792, 456 )
-rotation = 3.14159
-physics_material_override = SubResource( 1 )
-
-[node name="collision_shape_2d" type="CollisionShape2D" parent="y_sort/walls/wall_top41" index="0"]
-shape = SubResource( 2 )
-
-[node name="icon" type="Sprite" parent="y_sort/walls/wall_top41" index="1"]
-texture = ExtResource( 3 )
-
-[node name="wall_top45" type="StaticBody2D" parent="y_sort/walls" index="45"]
-position = Vector2( 840, 408 )
-rotation = 1.5708
-physics_material_override = SubResource( 1 )
-
-[node name="collision_shape_2d" type="CollisionShape2D" parent="y_sort/walls/wall_top45" index="0"]
-shape = SubResource( 2 )
-
-[node name="icon" type="Sprite" parent="y_sort/walls/wall_top45" index="1"]
-texture = ExtResource( 3 )
-
-[node name="wall_top46" type="StaticBody2D" parent="y_sort/walls" index="46"]
-position = Vector2( 840, 360 )
-rotation = 1.5708
-physics_material_override = SubResource( 1 )
-
-[node name="collision_shape_2d" type="CollisionShape2D" parent="y_sort/walls/wall_top46" index="0"]
-shape = SubResource( 2 )
-
-[node name="icon" type="Sprite" parent="y_sort/walls/wall_top46" index="1"]
-texture = ExtResource( 3 )
-
-[node name="wall_top47" type="StaticBody2D" parent="y_sort/walls" index="47"]
-position = Vector2( 24, 408 )
-rotation = 4.71238
-physics_material_override = SubResource( 1 )
-
-[node name="collision_shape_2d" type="CollisionShape2D" parent="y_sort/walls/wall_top47" index="0"]
-shape = SubResource( 2 )
-
-[node name="icon" type="Sprite" parent="y_sort/walls/wall_top47" index="1"]
-texture = ExtResource( 3 )
-
-[node name="wall_top48" type="StaticBody2D" parent="y_sort/walls" index="48"]
-position = Vector2( 24, 360 )
-rotation = 4.71238
-physics_material_override = SubResource( 1 )
-
-[node name="collision_shape_2d" type="CollisionShape2D" parent="y_sort/walls/wall_top48" index="0"]
-shape = SubResource( 2 )
-
-[node name="icon" type="Sprite" parent="y_sort/walls/wall_top48" index="1"]
-texture = ExtResource( 3 )
-
-[node name="wall_top42" type="StaticBody2D" parent="y_sort/walls" index="49"]
-position = Vector2( 744, 456 )
-rotation = 3.14159
-physics_material_override = SubResource( 1 )
-
-[node name="collision_shape_2d" type="CollisionShape2D" parent="y_sort/walls/wall_top42" index="0"]
-shape = SubResource( 2 )
-
-[node name="icon" type="Sprite" parent="y_sort/walls/wall_top42" index="1"]
-texture = ExtResource( 3 )
-
-[node name="wall_top43" type="StaticBody2D" parent="y_sort/walls" index="50"]
-position = Vector2( 696, 456 )
-rotation = 3.14159
-physics_material_override = SubResource( 1 )
-
-[node name="collision_shape_2d" type="CollisionShape2D" parent="y_sort/walls/wall_top43" index="0"]
-shape = SubResource( 2 )
-
-[node name="icon" type="Sprite" parent="y_sort/walls/wall_top43" index="1"]
-texture = ExtResource( 3 )
-
-[node name="wall_top44" type="StaticBody2D" parent="y_sort/walls" index="51"]
-position = Vector2( 648, 456 )
-rotation = 3.14159
-physics_material_override = SubResource( 1 )
-
-[node name="collision_shape_2d" type="CollisionShape2D" parent="y_sort/walls/wall_top44" index="0"]
-shape = SubResource( 2 )
-
-[node name="icon" type="Sprite" parent="y_sort/walls/wall_top44" index="1"]
-texture = ExtResource( 3 )
-
-[node name="obstacle_ysort" type="YSort" parent="y_sort" index="2"]
+[node name="obstacle_ysort" type="YSort" parent="y_sort" index="1"]
 
 [node name="pillar_obstacle" parent="y_sort/obstacle_ysort" index="0" instance=ExtResource( 2 )]
 position = Vector2( 240, 248 )
@@ -380,7 +182,7 @@ position = Vector2( 624, 152 )
 [node name="pillar_obstacle56" parent="y_sort/obstacle_ysort" index="55" instance=ExtResource( 2 )]
 position = Vector2( 592, 152 )
 
-[node name="enemy_ysort" type="YSort" parent="y_sort" index="3"]
+[node name="enemy_ysort" type="YSort" parent="y_sort" index="2"]
 
 [node name="hoplite_enemy" parent="y_sort/enemy_ysort" index="0" instance=ExtResource( 4 )]
 position = Vector2( 336, 336 )
@@ -402,3 +204,6 @@ position = Vector2( 696, 128 )
 
 [node name="limit_bottom_right" parent="." index="3"]
 position = Vector2( 864, 480 )
+
+[node name="tile_map" parent="." index="5"]
+tile_data = PoolIntArray( 0, 1, 0, 1, 536870912, 0, 2, 536870912, 0, 3, 536870912, 0, 4, 536870912, 0, 5, 536870912, 0, 6, 536870912, 0, 7, 536870912, 0, 8, 536870912, 0, 9, 536870912, 0, 10, 536870912, 0, 11, 536870912, 0, 12, 536870912, 0, 13, 536870912, 0, 14, 536870912, 0, 15, 536870912, 0, 16, 536870912, 0, 17, 536870913, 0, 65536, -2147483648, 0, 65553, -536870912, 0, 131072, -2147483648, 0, 131089, -536870912, 0, 196608, -2147483648, 0, 196625, -536870912, 0, 262144, -2147483648, 0, 262161, -536870912, 0, 327680, -2147483648, 0, 327697, -536870912, 0, 393216, -2147483648, 0, 393233, -536870912, 0, 458752, -2147483648, 0, 458769, -536870912, 0, 524288, -2147483648, 0, 524305, -536870912, 0, 589824, 1073741825, 0, 589825, 1073741824, 0, 589826, 1073741824, 0, 589827, 1073741824, 0, 589828, 1073741824, 0, 589829, 1073741824, 0, 589830, 1073741824, 0, 589831, 1073741824, 0, 589832, 1073741824, 0, 589833, 1073741824, 0, 589834, 1073741824, 0, 589835, 1073741824, 0, 589836, 1073741824, 0, 589837, 1073741824, 0, 589838, 1073741824, 0, 589839, 1073741824, 0, 589840, 1073741824, 0, 589841, -536870911, 0 )

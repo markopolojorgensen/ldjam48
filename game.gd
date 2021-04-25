@@ -9,7 +9,7 @@ export(bool) var skip_to_first_level = false
 func _ready():
 	global.connect("logic_update", self, "logic_update")
 	if skip_to_first_level:
-		global.current_floor_number = 4
+		global.current_floor_number = 7
 	load_floor()
 
 func load_floor():

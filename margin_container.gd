@@ -7,7 +7,8 @@ func _ready():
 
 func logic_update():
 	if global.final_boss_defeated:
-		show()
+		# show()
+		pass
 	else:
 		hide()
 

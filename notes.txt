@@ -2,10 +2,12 @@ TODO
 
   music
   sfx
+  take damage more obviously
   new title screen & new title
   more floors
   more enemies
   items???
+  boss title cards
 
 
 
@@ -30,6 +32,7 @@ TODO
     rolling boulders / rolling spike balls?
 
 
+  regain health?
 
 
   screenshake

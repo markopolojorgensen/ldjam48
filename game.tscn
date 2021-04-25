@@ -192,6 +192,7 @@ skip = true
 layer = 5
 
 [node name="margin_container" type="MarginContainer" parent="you_win"]
+visible = false
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0

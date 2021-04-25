@@ -23,12 +23,17 @@ func _physics_process(delta):
 	if body.is_tied_up:
 		return
 	
+	# charge
 	if is_charging and body.linear_velocity.length() < charge_speed:
 		var impulse = charge_direction.normalized() * charge_acceleration
 		body.apply_central_impulse(impulse * delta)
 	
-	if not is_charging:
+	# walk
+	if not is_charging and $suspend.is_stopped():
 		body.linear_velocity = walk_direction.normalized() * walk_speed
+	
+	if not $suspend.is_stopped():
+		body.apply_central_impulse(body.linear_velocity * -1 * delta * 50)
 
 func collision(other_body):
 	if is_charging and "wall" in other_body.name or "obstacle" in other_body.name:
@@ -37,6 +42,10 @@ func collision(other_body):
 		walk_direction = walk_direction * -1
 
 func _on_interval_timeout():
+	if not is_charging and $suspend.is_stopped():
+		$suspend.start()
+
+func _on_suspend_timeout():
 	if not is_charging:
 		is_charging = true
 		charge_direction = body.global_position.direction_to(global.player.global_position)
