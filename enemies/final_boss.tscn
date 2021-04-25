@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://enemies/enemy.tscn" type="PackedScene" id=1]
 [ext_resource path="res://external/aseprite/enemies/MINOTOAD/MINOTOAD_idle_00.png" type="Texture" id=2]
@@ -24,6 +24,7 @@
 [ext_resource path="res://external/aseprite/enemies/MINOTOAD/MINOTOAD_shuffle_02.png" type="Texture" id=22]
 [ext_resource path="res://external/aseprite/enemies/MINOTOAD/MINOTOAD_shuffle_03.png" type="Texture" id=23]
 [ext_resource path="res://external/aseprite/enemies/MINOTOAD/MINOTOAD_shuffle_09.png" type="Texture" id=24]
+[ext_resource path="res://enemies/behaviors/summoner_behavior.tscn" type="PackedScene" id=25]
 
 [sub_resource type="PhysicsMaterial" id=3]
 friction = 0.2
@@ -76,9 +77,9 @@ walk_speed = 50
 
 [node name="health_bar" parent="." index="4"]
 margin_left = -21.0
-margin_top = -56.0
+margin_top = 4.0
 margin_right = 21.0
-margin_bottom = -53.0
+margin_bottom = 7.0
 max_health = 50.0
 
 [node name="tied_up_sprite" parent="." index="6"]
@@ -86,3 +87,6 @@ position = Vector2( 0, -62 )
 
 [node name="ouch_duration" parent="." index="7"]
 wait_time = 0.3
+
+[node name="summoner_behavior" parent="." index="8" instance=ExtResource( 25 )]
+position = Vector2( 0, -24 )
