@@ -16,6 +16,7 @@ extents = Vector2( 24, 24 )
 script = ExtResource( 1 )
 
 [node name="ladder_down" parent="." instance=ExtResource( 3 )]
+position = Vector2( -79, 90 )
 
 [node name="y_sort" type="YSort" parent="."]
 
@@ -456,3 +457,5 @@ flip_v = true
 
 [node name="limit_bottom_right" type="Position2D" parent="."]
 position = Vector2( 672, 384 )
+
+[node name="spawn_points" type="Node2D" parent="."]

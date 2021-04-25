@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://weapons/horns.gd" type="Script" id=1]
+
+[node name="horns_behavior" type="Node2D"]
+script = ExtResource( 1 )
+charge_path = NodePath("../melee_charge_movement")
+body_path = NodePath("..")

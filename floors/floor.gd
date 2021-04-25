@@ -19,6 +19,10 @@ func get_enemy_count():
 	for child in $y_sort.get_children():
 		if (child as Node).is_in_group("enemies") and child.is_alive():
 			count += 1
+	if $y_sort.has_node("enemy_ysort"):
+		for child in $y_sort.get_node("enemy_ysort").get_children():
+			if (child as Node).is_in_group("enemies") and child.is_alive():
+				count += 1
 	return count
 
 func is_clear():

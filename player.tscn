@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://player.gd" type="Script" id=2]
@@ -29,6 +29,7 @@
 [ext_resource path="res://external/aseprite/player/frames/player_ouch/aseprite_frames/player_ouch_09.png" type="Texture" id=27]
 [ext_resource path="res://external/aseprite/player/frames/player_ouch/aseprite_frames/player_ouch_08.png" type="Texture" id=28]
 [ext_resource path="res://external/aseprite/player/frames/player_ouch/aseprite_frames/player_ouch_03.png" type="Texture" id=29]
+[ext_resource path="res://fx/player_defeat_fx.tscn" type="PackedScene" id=30]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 3.99998
@@ -59,6 +60,7 @@ mode = 2
 can_sleep = false
 linear_damp = 0.0
 script = ExtResource( 2 )
+perish_fx_scene = ExtResource( 30 )
 
 [node name="camera_2d" type="Camera2D" parent="."]
 current = true
@@ -124,5 +126,5 @@ margin_left = 8.0
 margin_top = 8.0
 margin_right = 96.0
 margin_bottom = 12.0
-max_health = 10000.0
-current_health = 10000.0
+max_health = 20.0
+current_health = 20.0

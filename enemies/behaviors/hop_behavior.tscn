@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://enemies/behaviors/hop_behavior.gd" type="Script" id=2]
+[ext_resource path="res://_addons/aggro/aggro.tscn" type="PackedScene" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 150.0
+
+[node name="hop_behavior" type="Node2D"]
+script = ExtResource( 2 )
+body_path = NodePath("..")
+shape_path = NodePath("../collision_shape_2d")
+
+[node name="aggro" parent="." instance=ExtResource( 3 )]
+visible = false
+collision_mask = 2
+raycast_path = NodePath("../aggro_raycast")
+min_interval = 0.1
+max_interval = 0.2
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="aggro"]
+shape = SubResource( 1 )
+
+[node name="aggro_raycast" type="RayCast2D" parent="."]
+enabled = true
+exclude_parent = false
+collision_mask = 3
+
+[node name="cooldown" type="Timer" parent="."]
+wait_time = 100.0
+one_shot = true
+
+[node name="suspend_duration" type="Timer" parent="."]
+wait_time = 0.7
+one_shot = true
+
+[connection signal="aggro" from="aggro" to="." method="_on_aggro_aggro"]
+[connection signal="aggro_lost" from="aggro" to="." method="_on_aggro_aggro_lost"]
+[connection signal="timeout" from="suspend_duration" to="." method="_on_suspend_duration_timeout"]

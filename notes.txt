@@ -1,16 +1,28 @@
 TODO
-  weapon knockback
+
+  music
+  sfx
+  new title screen & new title
+  more floors
+  more enemies
+  items???
+
+
 
   more floors
     FROGGER traffic run
+    spelling lessons: FROGUE
+    lily pond
     ring around the rosie
     lucky horseshoe
     danger zone (surrounded!)
     red rover red rover (enemies that bounce between walls)
   more enemies
-    hoplite
-    floaty toad
+    sword enemy?
+    summoner
     toad in a hole
+    tadpole
+    floaty toad
     poison mushroom
     toady
     trapdoor mimic
@@ -20,11 +32,11 @@ TODO
 
 
 
-
   screenshake
     when pillars are destroyed
     when enemies are defeated
   floor to floor debt?
+  weapon knockback
 
   pause
     item list
@@ -86,6 +98,12 @@ ITEMS
       invisible?
     dragon's teeth
     cat-tail of destiny
+
+  don't froget
+  curse of frog
+  frogue
+  frogue-like
+
   initial item select room
   random item spawns
   item tutorial room
@@ -108,6 +126,7 @@ resolution
     384x216 (/5)
     480x270 (/4)
     640x360 (/3) <- this one
+      320x180
     960x540 (/2)
 
 

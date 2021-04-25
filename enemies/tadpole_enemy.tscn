@@ -1,0 +1,221 @@
+[gd_scene load_steps=119 format=2]
+
+[ext_resource path="res://enemies/enemy.tscn" type="PackedScene" id=1]
+[ext_resource path="res://_addons/aggro/aggro.tscn" type="PackedScene" id=2]
+[ext_resource path="res://enemies/behaviors/slow_walker_behavior.gd" type="Script" id=3]
+[ext_resource path="res://enemies/tadpole_enemy.gd" type="Script" id=4]
+[ext_resource path="res://_addons/movement/top_down_movement.tscn" type="PackedScene" id=5]
+[ext_resource path="res://external/aseprite/enemies/tadpole/new_wobble/aseprite_frames/new_wobble_07.png" type="Texture" id=6]
+[ext_resource path="res://external/aseprite/enemies/tadpole/new_wobble/aseprite_frames/new_wobble_02.png" type="Texture" id=7]
+[ext_resource path="res://external/aseprite/enemies/tadpole/new_wobble/aseprite_frames/new_wobble_15.png" type="Texture" id=8]
+[ext_resource path="res://external/aseprite/enemies/tadpole/new_wobble/aseprite_frames/new_wobble_05.png" type="Texture" id=9]
+[ext_resource path="res://external/aseprite/enemies/tadpole/new_wobble/aseprite_frames/new_wobble_16.png" type="Texture" id=10]
+[ext_resource path="res://external/aseprite/enemies/tadpole/new_wobble/aseprite_frames/new_wobble_12.png" type="Texture" id=11]
+[ext_resource path="res://external/aseprite/enemies/tadpole/new_wobble/aseprite_frames/new_wobble_18.png" type="Texture" id=12]
+[ext_resource path="res://external/aseprite/enemies/tadpole/new_wobble/aseprite_frames/new_wobble_19.png" type="Texture" id=13]
+[ext_resource path="res://external/aseprite/enemies/tadpole/new_wobble/aseprite_frames/new_wobble_22.png" type="Texture" id=14]
+[ext_resource path="res://external/aseprite/enemies/tadpole/new_wobble/aseprite_frames/new_wobble_23.png" type="Texture" id=15]
+[ext_resource path="res://external/aseprite/enemies/tadpole/new_wobble/aseprite_frames/new_wobble_29.png" type="Texture" id=16]
+[ext_resource path="res://external/aseprite/enemies/tadpole/new_wobble/aseprite_frames/new_wobble_24.png" type="Texture" id=17]
+[ext_resource path="res://external/aseprite/enemies/tadpole/new_wobble/aseprite_frames/new_wobble_04.png" type="Texture" id=18]
+[ext_resource path="res://external/aseprite/enemies/tadpole/new_wobble/aseprite_frames/new_wobble_20.png" type="Texture" id=19]
+[ext_resource path="res://external/aseprite/enemies/tadpole/new_wobble/aseprite_frames/new_wobble_10.png" type="Texture" id=20]
+[ext_resource path="res://external/aseprite/enemies/tadpole/new_wobble/aseprite_frames/new_wobble_21.png" type="Texture" id=21]
+[ext_resource path="res://external/aseprite/enemies/tadpole/new_wobble/aseprite_frames/new_wobble_13.png" type="Texture" id=22]
+[ext_resource path="res://external/aseprite/enemies/tadpole/new_wobble/aseprite_frames/new_wobble_06.png" type="Texture" id=23]
+[ext_resource path="res://external/aseprite/enemies/tadpole/new_wobble/aseprite_frames/new_wobble_26.png" type="Texture" id=24]
+[ext_resource path="res://external/aseprite/enemies/tadpole/new_wobble/aseprite_frames/new_wobble_00.png" type="Texture" id=25]
+[ext_resource path="res://external/aseprite/enemies/tadpole/new_wobble/aseprite_frames/new_wobble_11.png" type="Texture" id=26]
+[ext_resource path="res://external/aseprite/enemies/tadpole/new_wobble/aseprite_frames/new_wobble_14.png" type="Texture" id=27]
+[ext_resource path="res://external/aseprite/enemies/tadpole/new_wobble/aseprite_frames/new_wobble_17.png" type="Texture" id=28]
+[ext_resource path="res://external/aseprite/enemies/tadpole/new_wobble/aseprite_frames/new_wobble_28.png" type="Texture" id=29]
+[ext_resource path="res://external/aseprite/enemies/tadpole/new_wobble/aseprite_frames/new_wobble_03.png" type="Texture" id=30]
+[ext_resource path="res://external/aseprite/enemies/tadpole/new_wobble/aseprite_frames/new_wobble_27.png" type="Texture" id=31]
+[ext_resource path="res://external/aseprite/enemies/tadpole/new_wobble/aseprite_frames/new_wobble_25.png" type="Texture" id=32]
+[ext_resource path="res://external/aseprite/enemies/tadpole/new_wobble/aseprite_frames/new_wobble_09.png" type="Texture" id=33]
+[ext_resource path="res://external/aseprite/enemies/tadpole/new_wobble/aseprite_frames/new_wobble_01.png" type="Texture" id=34]
+[ext_resource path="res://external/aseprite/enemies/tadpole/new_wobble/aseprite_frames/new_wobble_08.png" type="Texture" id=35]
+[ext_resource path="res://enemies/behaviors/summoner_behavior.gd" type="Script" id=36]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_20.png" type="Texture" id=37]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_36.png" type="Texture" id=38]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_48.png" type="Texture" id=39]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_56.png" type="Texture" id=40]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_57.png" type="Texture" id=41]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_58.png" type="Texture" id=42]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_55.png" type="Texture" id=43]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_59.png" type="Texture" id=44]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_19.png" type="Texture" id=45]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_23.png" type="Texture" id=46]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_25.png" type="Texture" id=47]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_35.png" type="Texture" id=48]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_44.png" type="Texture" id=49]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_45.png" type="Texture" id=50]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_46.png" type="Texture" id=51]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_54.png" type="Texture" id=52]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_32.png" type="Texture" id=53]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_18.png" type="Texture" id=54]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_28.png" type="Texture" id=55]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_30.png" type="Texture" id=56]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_37.png" type="Texture" id=57]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_31.png" type="Texture" id=58]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_15.png" type="Texture" id=59]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_17.png" type="Texture" id=60]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_22.png" type="Texture" id=61]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_21.png" type="Texture" id=62]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_33.png" type="Texture" id=63]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_40.png" type="Texture" id=64]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_41.png" type="Texture" id=65]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_42.png" type="Texture" id=66]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_43.png" type="Texture" id=67]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_16.png" type="Texture" id=68]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_26.png" type="Texture" id=69]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_47.png" type="Texture" id=70]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_51.png" type="Texture" id=71]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_52.png" type="Texture" id=72]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_53.png" type="Texture" id=73]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_27.png" type="Texture" id=74]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_38.png" type="Texture" id=75]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_24.png" type="Texture" id=76]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_49.png" type="Texture" id=77]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_50.png" type="Texture" id=78]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_14.png" type="Texture" id=79]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_13.png" type="Texture" id=80]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_29.png" type="Texture" id=81]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_39.png" type="Texture" id=82]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_34.png" type="Texture" id=83]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_00.png" type="Texture" id=84]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_05.png" type="Texture" id=85]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_11.png" type="Texture" id=86]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_02.png" type="Texture" id=87]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_03.png" type="Texture" id=88]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_04.png" type="Texture" id=89]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_06.png" type="Texture" id=90]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_07.png" type="Texture" id=91]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_08.png" type="Texture" id=92]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_10.png" type="Texture" id=93]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_01.png" type="Texture" id=94]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_09.png" type="Texture" id=95]
+[ext_resource path="res://external/pfxd/disco/aseprite_frames/disco_12.png" type="Texture" id=96]
+[ext_resource path="res://enemies/hoplite_enemy.tscn" type="PackedScene" id=97]
+[ext_resource path="res://external/aseprite/enemies/tadpole/ouch/aseprite_frames/ouch_00.png" type="Texture" id=126]
+[ext_resource path="res://external/aseprite/enemies/tadpole/ouch/aseprite_frames/ouch_01.png" type="Texture" id=127]
+[ext_resource path="res://external/aseprite/enemies/tadpole/ouch/aseprite_frames/ouch_02.png" type="Texture" id=128]
+[ext_resource path="res://external/aseprite/enemies/tadpole/ouch/aseprite_frames/ouch_03.png" type="Texture" id=129]
+[ext_resource path="res://external/aseprite/enemies/tadpole/ouch/aseprite_frames/ouch_06.png" type="Texture" id=130]
+[ext_resource path="res://external/aseprite/enemies/tadpole/ouch/aseprite_frames/ouch_07.png" type="Texture" id=131]
+[ext_resource path="res://external/aseprite/enemies/tadpole/ouch/aseprite_frames/ouch_04.png" type="Texture" id=132]
+[ext_resource path="res://external/aseprite/enemies/tadpole/ouch/aseprite_frames/ouch_05.png" type="Texture" id=133]
+[ext_resource path="res://external/aseprite/enemies/tadpole/ouch/aseprite_frames/ouch_08.png" type="Texture" id=134]
+[ext_resource path="res://external/aseprite/enemies/tadpole/ouch/aseprite_frames/ouch_09.png" type="Texture" id=135]
+[ext_resource path="res://external/aseprite/enemies/tadpole/ouch/aseprite_frames/ouch_10.png" type="Texture" id=136]
+[ext_resource path="res://external/aseprite/enemies/tadpole/ouch/aseprite_frames/ouch_12.png" type="Texture" id=137]
+[ext_resource path="res://external/aseprite/enemies/tadpole/ouch/aseprite_frames/ouch_11.png" type="Texture" id=138]
+[ext_resource path="res://external/aseprite/enemies/tadpole/ouch/aseprite_frames/ouch_14.png" type="Texture" id=139]
+[ext_resource path="res://external/aseprite/enemies/tadpole/ouch/aseprite_frames/ouch_13.png" type="Texture" id=140]
+[ext_resource path="res://fx/tadpole_perish.tscn" type="PackedScene" id=141]
+[ext_resource path="res://external/aseprite/enemies/tadpole/tadpole_01.png" type="Texture" id=142]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 25 ), ExtResource( 34 ), ExtResource( 7 ), ExtResource( 30 ), ExtResource( 18 ), ExtResource( 9 ), ExtResource( 23 ), ExtResource( 6 ), ExtResource( 35 ), ExtResource( 33 ), ExtResource( 20 ), ExtResource( 26 ), ExtResource( 11 ), ExtResource( 22 ), ExtResource( 27 ), ExtResource( 8 ), ExtResource( 10 ), ExtResource( 28 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 19 ), ExtResource( 21 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 17 ), ExtResource( 32 ), ExtResource( 24 ), ExtResource( 31 ), ExtResource( 29 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "idle",
+"speed": 30.0
+}, {
+"frames": [ ExtResource( 126 ), ExtResource( 127 ), ExtResource( 128 ), ExtResource( 129 ), ExtResource( 132 ), ExtResource( 133 ), ExtResource( 130 ), ExtResource( 131 ), ExtResource( 134 ), ExtResource( 135 ), ExtResource( 136 ), ExtResource( 138 ), ExtResource( 137 ), ExtResource( 140 ), ExtResource( 139 ) ],
+"loop": false,
+"name": "ouch",
+"speed": 45.0
+} ]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 250.0
+
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 4.0
+height = 10.0
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 84 ), ExtResource( 94 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 89 ), ExtResource( 85 ), ExtResource( 90 ), ExtResource( 91 ), ExtResource( 92 ), ExtResource( 95 ), ExtResource( 93 ), ExtResource( 86 ), ExtResource( 96 ), ExtResource( 80 ), ExtResource( 79 ), ExtResource( 59 ), ExtResource( 68 ), ExtResource( 60 ), ExtResource( 54 ), ExtResource( 45 ), ExtResource( 37 ), ExtResource( 62 ), ExtResource( 61 ), ExtResource( 46 ), ExtResource( 76 ), ExtResource( 47 ), ExtResource( 69 ), ExtResource( 74 ), ExtResource( 55 ), ExtResource( 81 ), ExtResource( 56 ), ExtResource( 58 ), ExtResource( 53 ), ExtResource( 63 ), ExtResource( 83 ), ExtResource( 48 ), ExtResource( 38 ), ExtResource( 57 ), ExtResource( 75 ), ExtResource( 82 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 70 ), ExtResource( 39 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 52 ), ExtResource( 43 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 44 ) ],
+"loop": true,
+"name": "default",
+"speed": 30.0
+} ]
+
+[node name="tadpole_enemy" instance=ExtResource( 1 )]
+script = ExtResource( 4 )
+flip_perish = true
+perish_fx_scene = ExtResource( 141 )
+
+[node name="animated_sprite" parent="." index="0"]
+position = Vector2( 0, -8 )
+frames = SubResource( 2 )
+animation = "idle"
+offset = Vector2( -18, 0 )
+
+[node name="sprite" type="Sprite" parent="." index="1"]
+position = Vector2( 0, -7 )
+texture = ExtResource( 142 )
+offset = Vector2( -18, 0 )
+
+[node name="health_bar" parent="." index="2"]
+max_health = 30.0
+current_health = 30.0
+
+[node name="ouch_duration" parent="." index="5"]
+wait_time = 0.34
+
+[node name="slow_walker_behavior" type="Node2D" parent="." index="6"]
+script = ExtResource( 3 )
+body_path = NodePath("..")
+
+[node name="aggro" parent="slow_walker_behavior" index="0" instance=ExtResource( 2 )]
+collision_mask = 2
+raycast_path = NodePath("../aggro_ray")
+min_interval = 0.2
+max_interval = 0.3
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="slow_walker_behavior/aggro" index="1"]
+shape = SubResource( 1 )
+
+[node name="aggro_ray" type="RayCast2D" parent="slow_walker_behavior" index="1"]
+enabled = true
+collision_mask = 3
+
+[node name="top_down_movement" parent="slow_walker_behavior" index="2" instance=ExtResource( 5 )]
+body_path = NodePath("../..")
+direction_path = NodePath("..")
+default_max_speed = 100.0
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="." index="7"]
+position = Vector2( 0, -1 )
+rotation = 1.5708
+shape = SubResource( 3 )
+
+[node name="stab_cooldown" type="Timer" parent="." index="8"]
+wait_time = 3.0
+one_shot = true
+
+[node name="stab_done" type="Timer" parent="." index="9"]
+one_shot = true
+
+[node name="summoner_behavior" type="Node2D" parent="." index="10"]
+script = ExtResource( 36 )
+enemy_scene = ExtResource( 97 )
+
+[node name="animated_sprite" type="AnimatedSprite" parent="summoner_behavior" index="0"]
+position = Vector2( 0, -41 )
+frames = SubResource( 4 )
+
+[node name="cooldown" type="Timer" parent="summoner_behavior" index="1"]
+wait_time = 7.0
+
+[node name="duration" type="Timer" parent="summoner_behavior" index="2"]
+
+[connection signal="aggro" from="slow_walker_behavior/aggro" to="slow_walker_behavior" method="_on_aggro_aggro"]
+[connection signal="aggro_lost" from="slow_walker_behavior/aggro" to="slow_walker_behavior" method="_on_aggro_aggro_lost"]
+[connection signal="timeout" from="stab_cooldown" to="." method="_on_stab_cooldown_timeout"]
+[connection signal="timeout" from="stab_done" to="." method="_on_stab_done_timeout"]
+[connection signal="timeout" from="summoner_behavior/cooldown" to="summoner_behavior" method="_on_cooldown_timeout"]
+[connection signal="timeout" from="summoner_behavior/duration" to="summoner_behavior" method="_on_duration_timeout"]

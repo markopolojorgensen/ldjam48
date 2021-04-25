@@ -25,6 +25,11 @@ _global_script_classes=[ {
 "path": "res://floors/floor.gd"
 }, {
 "base": "Node2D",
+"class": "GenericFX",
+"language": "GDScript",
+"path": "res://fx/generic_oneoff_fx.gd"
+}, {
+"base": "Node2D",
 "class": "IntendedDirection",
 "language": "GDScript",
 "path": "res://_addons/user_input/intended_direction.gd"
@@ -48,6 +53,7 @@ _global_script_class_icons={
 "AnimationRandomizer": "",
 "Enemy": "",
 "FloorLevel": "",
+"GenericFX": "",
 "IntendedDirection": "",
 "Player": "",
 "Sword": "",

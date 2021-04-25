@@ -14,6 +14,7 @@ var is_floor_finished = false
 var show_items = false
 
 var tutorial_skip = false
+var title_screen = false
 
 var player
 var camera : Camera2D

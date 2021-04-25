@@ -1,61 +1,70 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://enemies/enemy.tscn" type="PackedScene" id=1]
 [ext_resource path="res://enemies/hoplite_enemy.gd" type="Script" id=2]
-[ext_resource path="res://external/aseprite/dummy.png" type="Texture" id=3]
-[ext_resource path="res://_addons/aggro/aggro.tscn" type="PackedScene" id=4]
-[ext_resource path="res://enemies/behaviors/hop_behavior.gd" type="Script" id=5]
-[ext_resource path="res://icon.png" type="Texture" id=6]
+[ext_resource path="res://external/aseprite/enemies/hoplite/hoplite_idle_00.png" type="Texture" id=3]
+[ext_resource path="res://enemies/behaviors/hop_behavior.tscn" type="PackedScene" id=4]
+[ext_resource path="res://external/aseprite/enemies/hoplite/hoplite_shadow_04.png" type="Texture" id=6]
+[ext_resource path="res://external/aseprite/enemies/hoplite/hoplite_ouch/aseprite_frames/hoplite_ouch_05.png" type="Texture" id=7]
+[ext_resource path="res://external/aseprite/enemies/hoplite/hoplite_ouch/aseprite_frames/hoplite_ouch_03.png" type="Texture" id=8]
+[ext_resource path="res://external/aseprite/enemies/hoplite/hoplite_ouch/aseprite_frames/hoplite_ouch_00.png" type="Texture" id=9]
+[ext_resource path="res://external/aseprite/enemies/hoplite/hoplite_ouch/aseprite_frames/hoplite_ouch_02.png" type="Texture" id=10]
+[ext_resource path="res://external/aseprite/enemies/hoplite/hoplite_ouch/aseprite_frames/hoplite_ouch_06.png" type="Texture" id=11]
+[ext_resource path="res://external/aseprite/enemies/hoplite/hoplite_ouch/aseprite_frames/hoplite_ouch_08.png" type="Texture" id=12]
+[ext_resource path="res://external/aseprite/enemies/hoplite/hoplite_ouch/aseprite_frames/hoplite_ouch_07.png" type="Texture" id=13]
+[ext_resource path="res://external/aseprite/enemies/hoplite/hoplite_ouch/aseprite_frames/hoplite_ouch_01.png" type="Texture" id=14]
+[ext_resource path="res://external/aseprite/enemies/hoplite/hoplite_ouch/aseprite_frames/hoplite_ouch_04.png" type="Texture" id=15]
+[ext_resource path="res://external/aseprite/enemies/hoplite/hoplite_hop_02.png" type="Texture" id=16]
+[ext_resource path="res://fx/hoplite_defeat.tscn" type="PackedScene" id=17]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
-"name": "default",
+"name": "idle",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 16 ) ],
+"loop": true,
+"name": "hop",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 14 ), ExtResource( 10 ), ExtResource( 8 ), ExtResource( 15 ), ExtResource( 7 ), ExtResource( 11 ), ExtResource( 13 ), ExtResource( 12 ) ],
+"loop": false,
+"name": "ouch",
+"speed": 30.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=3]
-
-[sub_resource type="CircleShape2D" id=2]
-radius = 150.0
+radius = 5.0
+height = 8.0
 
 [node name="hoplite_enemy" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
+perish_fx_scene = ExtResource( 17 )
 
-[node name="animated_sprite" parent="." index="0"]
-position = Vector2( 1, -11 )
-frames = SubResource( 1 )
-
-[node name="shadow" type="Sprite" parent="." index="1"]
-modulate = Color( 1, 1, 1, 0.235294 )
-position = Vector2( 0, 1 )
-scale = Vector2( 0.46875, 0.28125 )
+[node name="shadow" type="Sprite" parent="." index="0"]
+modulate = Color( 1, 1, 1, 0.501961 )
+position = Vector2( 0, -3 )
 texture = ExtResource( 6 )
 
+[node name="animated_sprite" parent="." index="1"]
+position = Vector2( 0, -3 )
+frames = SubResource( 1 )
+animation = "idle"
+
+[node name="health_bar" parent="." index="2"]
+margin_left = -12.0
+margin_top = 7.0
+margin_right = 12.0
+margin_bottom = 10.0
+
+[node name="ouch_duration" parent="." index="5"]
+wait_time = 0.3
+
 [node name="collision_shape_2d" type="CollisionShape2D" parent="." index="6"]
+visible = false
 rotation = 1.5708
 shape = SubResource( 3 )
 
-[node name="hop_behavior" type="Node2D" parent="." index="7"]
-script = ExtResource( 5 )
-body_path = NodePath("..")
-
-[node name="aggro" parent="hop_behavior" index="0" instance=ExtResource( 4 )]
-collision_mask = 2
-raycast_path = NodePath("../aggro_raycast")
-
-[node name="collision_shape_2d" type="CollisionShape2D" parent="hop_behavior/aggro" index="1"]
-shape = SubResource( 2 )
-
-[node name="aggro_raycast" type="RayCast2D" parent="hop_behavior" index="1"]
-enabled = true
-exclude_parent = false
-collision_mask = 2
-
-[node name="cooldown" type="Timer" parent="hop_behavior" index="2"]
-wait_time = 3.0
-one_shot = true
-
-[connection signal="aggro" from="hop_behavior/aggro" to="hop_behavior" method="_on_aggro_aggro"]
-[connection signal="aggro_lost" from="hop_behavior/aggro" to="hop_behavior" method="_on_aggro_aggro_lost"]
+[node name="hop_behavior" parent="." index="7" instance=ExtResource( 4 )]

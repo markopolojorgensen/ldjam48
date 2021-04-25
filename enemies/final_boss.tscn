@@ -4,7 +4,7 @@
 [ext_resource path="res://external/aseprite/enemies/MINOTOAD/MINOTOAD_idle_00.png" type="Texture" id=2]
 [ext_resource path="res://enemies/final_boss.gd" type="Script" id=3]
 [ext_resource path="res://enemies/behaviors/melee_charge_movement.tscn" type="PackedScene" id=4]
-[ext_resource path="res://weapons/horns.gd" type="Script" id=5]
+[ext_resource path="res://enemies/behaviors/horns_behavior.tscn" type="PackedScene" id=5]
 [ext_resource path="res://external/aseprite/enemies/MINOTOAD/ouch_aseprite_frames/minotoad_ouch_04.png" type="Texture" id=6]
 [ext_resource path="res://external/aseprite/enemies/MINOTOAD/ouch_aseprite_frames/minotoad_ouch_06.png" type="Texture" id=7]
 [ext_resource path="res://external/aseprite/enemies/MINOTOAD/ouch_aseprite_frames/minotoad_ouch_03.png" type="Texture" id=8]
@@ -72,10 +72,7 @@ shape = SubResource( 2 )
 body_path = NodePath("..")
 walk_speed = 50
 
-[node name="horns" type="Node2D" parent="." index="3"]
-script = ExtResource( 5 )
-charge_path = NodePath("../melee_charge_movement")
-body_path = NodePath("..")
+[node name="horns_behavior" parent="." index="3" instance=ExtResource( 5 )]
 
 [node name="health_bar" parent="." index="4"]
 margin_left = -21.0
