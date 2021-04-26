@@ -13,6 +13,7 @@ var from_position : Vector2
 var to_position : Vector2
 var is_hopping = false
 var hop_time = 0
+var to_position_offset : Vector2
 const total_hop_time = 0.5
 
 var max_height = 50
@@ -21,10 +22,11 @@ func _process(_delta):
 		is_hopping = true
 		$hop_sfx.pitch_scale = rand_range(0.9, 1.1)
 		$hop_sfx.play()
-		$cooldown.wait_time = rand_range(2.5, 3.5)
+		$cooldown.wait_time = rand_range(2, 3)
 		$cooldown.start()
 		from_position = global_position
-		to_position = target.global_position
+		to_position_offset = Vector2(40, 0).rotated(rand_range(-PI, PI))
+		to_position = target.global_position + to_position_offset
 		hop_time = 0
 		
 		# disable collision
@@ -35,7 +37,7 @@ func _integrate_forces(state : Physics2DDirectBodyState):
 		hop_time += state.step
 		
 		if get_hop_weight() < 0.7 and target:
-			to_position = target.global_position
+			to_position = target.global_position + to_position_offset
 		
 		var frame_dest = from_position.linear_interpolate(to_position, get_hop_weight())
 		state.linear_velocity = (frame_dest - global_position) / state.step

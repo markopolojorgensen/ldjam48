@@ -60,4 +60,3 @@ offset = Vector2( -18, 0 )
 
 [node name="audio_stream_player_2d" parent="." index="1"]
 stream = ExtResource( 43 )
-volume_db = -3.0

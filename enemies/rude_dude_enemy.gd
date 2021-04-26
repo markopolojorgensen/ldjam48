@@ -5,6 +5,7 @@ var fireball_scene = preload("res://weapons/fireball.tscn")
 func _ready():
 	$collision_shape_2d.disabled = true
 	$extra_hide.wait_time = rand_range(0, 5)
+	$animated_sprite.play("hide")
 	$extra_hide.start()
 
 func _process(_delta):
@@ -15,7 +16,7 @@ func _process(_delta):
 	
 	if not $ouch_duration.is_stopped():
 		$animated_sprite.play("ouch")
-	elif not $hide_duration.is_stopped():
+	elif not $hide_duration.is_stopped() or not $extra_hide.is_stopped():
 		$animated_sprite.play("hide")
 	elif not $prep_duration.is_stopped():
 		$animated_sprite.play("prep")
@@ -28,12 +29,15 @@ func _on_hide_duration_timeout():
 
 func _on_prep_timeout():
 	$shoot_duration.start()
-	var fireball = fireball_scene.instance()
-	fireball.direction = global_position.direction_to(global.player.global_position)
-	get_parent().add_child(fireball)
-	fireball.global_position = $fireball_spawn.global_position
-	if $animated_sprite.flip_h:
-		fireball.global_position.x -= 2 * $fireball_spawn.position.x
+	
+	for i in range(3):
+		var fireball = fireball_scene.instance()
+		var rotation_amount = -(PI/4) + (i * (PI/4))
+		fireball.direction = global_position.direction_to(global.player.global_position).rotated(rotation_amount)
+		get_parent().add_child(fireball)
+		fireball.global_position = $fireball_spawn.global_position
+		if $animated_sprite.flip_h:
+			fireball.global_position.x -= 2 * $fireball_spawn.position.x
 
 func _on_shoot_duration_timeout():
 	$hide_duration.start()

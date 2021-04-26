@@ -8,11 +8,11 @@
 [ext_resource path="res://external/aseprite/enemies/rude_dude/rude_dude_02.png" type="Texture" id=6]
 [ext_resource path="res://fx/lizard_parish.tscn" type="PackedScene" id=7]
 
-[sub_resource type="CapsuleShape2D" id=2]
+[sub_resource type="CapsuleShape2D" id=3]
 radius = 7.0
 height = 10.0
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [  ],
 "loop": false,
@@ -43,31 +43,31 @@ perish_fx_scene = ExtResource( 7 )
 
 [node name="collision_shape_2d" type="CollisionShape2D" parent="." index="0"]
 rotation = 1.5708
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
 [node name="animated_sprite" parent="." index="1"]
 position = Vector2( 0, -4 )
-frames = SubResource( 1 )
+frames = SubResource( 2 )
 animation = "ouch"
 
 [node name="health_bar" parent="." index="2"]
 margin_left = -12.0
 margin_right = 12.0
-max_health = 15.0
-current_health = 15.0
+max_health = 20.0
+current_health = 20.0
 
 [node name="ouch_duration" parent="." index="5"]
 wait_time = 0.4
 
 [node name="hide_duration" type="Timer" parent="." index="7"]
-wait_time = 4.0
 one_shot = true
 
 [node name="prep_duration" type="Timer" parent="." index="8"]
-wait_time = 2.0
+wait_time = 0.75
 one_shot = true
 
 [node name="shoot_duration" type="Timer" parent="." index="9"]
+wait_time = 2.0
 one_shot = true
 
 [node name="extra_hide" type="Timer" parent="." index="10"]

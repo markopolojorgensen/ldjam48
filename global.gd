@@ -15,10 +15,14 @@ var player_lost = false
 var is_floor_finished = false
 var show_items = false
 
+var is_dummy_floor_available = true
+
 var tutorial_skip = false
 var title_screen = false
 
 var player
+var health
+
 var camera : Camera2D
 
 var current_floor_number = 0

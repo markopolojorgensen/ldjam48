@@ -8,6 +8,7 @@
 
 [node name="frogotten_floor" instance=ExtResource( 1 )]
 script = ExtResource( 5 )
+title_card_text = "The FROGOTTEN"
 
 [node name="ladder_down" parent="." index="0"]
 position = Vector2( 407, 104 )

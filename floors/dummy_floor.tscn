@@ -5,7 +5,7 @@
 [ext_resource path="res://floors/obstacles/pillar_obstacle.tscn" type="PackedScene" id=3]
 
 [node name="dummy_floor" instance=ExtResource( 1 )]
-title_card_text = "THE FROGOTTEN"
+title_card_text = "It's just a bunch of dummies"
 
 [node name="ladder_down" parent="." index="0"]
 position = Vector2( 543, 192 )

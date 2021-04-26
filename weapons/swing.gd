@@ -29,7 +29,7 @@ func _process(delta):
 			sword.queue_free()
 
 func _unhandled_input(event):
-	if event.is_action_pressed("swing") and not is_swinging:
+	if event.is_action_pressed("swing") and not is_swinging and not global.player_lost:
 		show()
 		is_swinging = true
 		var swing_direction = (intended_direction as IntendedDirection).get_last_intended_direction()

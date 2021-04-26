@@ -1,6 +1,8 @@
 class_name FloorLevel
 extends Node2D
 
+var show_arrow = false
+
 var front_scenes = {
 	0.1 : {
 		"name" : "dummy",
@@ -57,6 +59,16 @@ func _ready():
 		$tween.interpolate_property($title_card_layer/margin_container, "modulate", Color(1,1,1,1), Color(1,1,1,0), 1, Tween.TRANS_CUBIC, Tween.EASE_IN_OUT, 3.0)
 		$tween.start()
 
+
+func _process(delta):
+	if show_arrow:
+		$arrow.show()
+		$arrow.global_position = global.player.global_position
+		var last_enemy = get_enemies()[0]
+		$arrow.rotation = last_enemy.global_position.angle_to_point(global.player.global_position)
+	else:
+		$arrow.hide()
+
 func spawn_enemies():
 	var spawn_count = 4
 	if global.front_half:
@@ -71,7 +83,11 @@ func spawn_enemies():
 			# print("rerolling rude dude")
 			roll_result = get_roll_result()
 		
-		print("picked a scene: %s" % str(roll_result["name"]))
+		while name == "sneaky_gallery_floor" and roll_result["name"] == "dummy":
+			# print("rerolling rude dude")
+			roll_result = get_roll_result()
+		
+		# print("picked a scene: %s" % str(roll_result["name"]))
 		
 		var spawn_position = $spawn_points.get_child(i).global_position
 		match roll_result["name"]:
@@ -124,7 +140,24 @@ func get_enemy_count():
 func is_clear():
 	return get_enemy_count() == 0
 
+func get_enemies():
+	var result = []
+	for child in $y_sort.get_children():
+		if (child as Node).is_in_group("enemies") and child.is_alive():
+			result.append(child)
+	if $y_sort.has_node("enemy_ysort"):
+		for child in $y_sort.get_node("enemy_ysort").get_children():
+			if (child as Node).is_in_group("enemies") and child.is_alive():
+				result.append(child)
+	return result
+
 func logic_update():
+	var count = get_enemy_count()
+	if count == 1:
+		show_arrow = true
+	else:
+		show_arrow = false
+	
 	if is_clear():
 		global.show_items = true
 		$ladder_down.fancy_show()

@@ -5,9 +5,13 @@ var dead = false
 
 export(PackedScene) var perish_fx_scene
 
+var og_margin_pos
+
 func _ready():
 	global.player = self
 	global.camera = $camera_2d
+	
+	og_margin_pos = $canvas_layer/margin_container.rect_global_position
 
 func _process(_delta):
 	if global.player_lost:
@@ -18,6 +22,11 @@ func _process(_delta):
 			$sprite.play("walk")
 		else:
 			$sprite.play("idle")
+	
+	if $canvas_layer/margin_container/health_bar.current_health <= 6:
+		$canvas_layer/margin_container.rect_global_position = og_margin_pos + Vector2((randi() % 5) - 2, (randi() % 5) - 2)
+	# elif $canvas_layer/margin_container/health_bar.current_health < 9:
+	# 	$canvas_layer/margin_container.rect_global_position = og_margin_pos + Vector2((randi() % 3) - 1, (randi() % 3) - 1)
 
 func _integrate_forces(state):
 	if global.player_lost:
@@ -42,12 +51,12 @@ func get_faction():
 
 func hit_by_horns():
 	if $invuln_cooldown.is_stopped():
-		$canvas_layer/margin_container/health_bar.modify_health(-10)
+		$canvas_layer/margin_container/health_bar.modify_health(-5)
 		ouch()
 
 func hit_by_hoplite_slam(_slam):
 	if $invuln_cooldown.is_stopped():
-		$canvas_layer/margin_container/health_bar.modify_health(-3)
+		$canvas_layer/margin_container/health_bar.modify_health(-2)
 		ouch()
 
 func hit_by_fly(_fly):
@@ -57,12 +66,12 @@ func hit_by_fly(_fly):
 
 func stabbed(_stabby):
 	if $invuln_cooldown.is_stopped():
-		$canvas_layer/margin_container/health_bar.modify_health(-5)
+		$canvas_layer/margin_container/health_bar.modify_health(-4)
 		ouch()
 
 func hit_by_fireball(_fireball):
 	if $invuln_cooldown.is_stopped():
-		$canvas_layer/margin_container/health_bar.modify_health(-8)
+		$canvas_layer/margin_container/health_bar.modify_health(-3)
 		ouch()
 
 func ouch():
@@ -99,3 +108,12 @@ func _on_sprite_frame_changed():
 	if $sprite.animation == "walk":
 		$footstep.pitch_scale = rand_range(0.9, 1.1)
 		$footstep.play()
+
+func get_health():
+	return $canvas_layer/margin_container/health_bar.current_health
+
+func set_health(health):
+	$canvas_layer/margin_container/health_bar.current_health = health
+
+
+

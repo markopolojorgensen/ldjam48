@@ -57,7 +57,7 @@ one_shot = true
 autostart = true
 
 [node name="slam_duration" type="Timer" parent="."]
-wait_time = 0.25
+wait_time = 0.2
 one_shot = true
 autostart = true
 

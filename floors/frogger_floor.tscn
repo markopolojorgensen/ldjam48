@@ -35,12 +35,9 @@ position = Vector2( 187, 615 )
 position = Vector2( 499, 466 )
 
 [node name="position_2d5" type="Position2D" parent="spawn_points" index="4"]
-position = Vector2( 208, 406 )
+position = Vector2( 208, 391 )
 
-[node name="position_2d6" type="Position2D" parent="spawn_points" index="5"]
-position = Vector2( 496, 331 )
-
-[node name="position_2d7" type="Position2D" parent="spawn_points" index="6"]
+[node name="position_2d7" type="Position2D" parent="spawn_points" index="5"]
 position = Vector2( 336, 157 )
 
 [node name="tile_map" parent="." index="5"]

@@ -1,11 +1,11 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://player.gd" type="Script" id=2]
 [ext_resource path="res://_addons/movement/top_down_movement.tscn" type="PackedScene" id=3]
 [ext_resource path="res://_addons/user_input/intended_direction.tscn" type="PackedScene" id=4]
 [ext_resource path="res://weapons/swing.gd" type="Script" id=5]
-[ext_resource path="res://_addons/health/health_bar.tscn" type="PackedScene" id=6]
+[ext_resource path="res://_addons/health/player_health_bar.tscn" type="PackedScene" id=6]
 [ext_resource path="res://external/aseprite/player/frames/player_idle_00.png" type="Texture" id=7]
 [ext_resource path="res://external/aseprite/player/frames/player_walk_05.png" type="Texture" id=8]
 [ext_resource path="res://external/aseprite/player/frames/player_walk_03.png" type="Texture" id=9]
@@ -33,11 +33,14 @@
 [ext_resource path="res://external/sunvox/sfx/player ouch long.wav" type="AudioStream" id=31]
 [ext_resource path="res://external/sunvox/sfx/footstep.wav" type="AudioStream" id=32]
 
-[sub_resource type="CapsuleShape2D" id=1]
+[sub_resource type="PhysicsMaterial" id=1]
+friction = 0.1
+
+[sub_resource type="CapsuleShape2D" id=2]
 radius = 3.99998
 height = 12.0
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=3]
 animations = [ {
 "frames": [ ExtResource( 7 ) ],
 "loop": false,
@@ -59,6 +62,7 @@ animations = [ {
 collision_layer = 2
 collision_mask = 13
 mode = 2
+physics_material_override = SubResource( 1 )
 can_sleep = false
 linear_damp = 0.0
 script = ExtResource( 2 )
@@ -74,11 +78,11 @@ smoothing_speed = 6.0
 [node name="collision_shape_2d" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -2 )
 rotation = 1.5708
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="sprite" type="AnimatedSprite" parent="."]
 position = Vector2( 0, -8 )
-frames = SubResource( 2 )
+frames = SubResource( 3 )
 animation = "idle"
 
 [node name="ouch_duration" type="Timer" parent="."]
@@ -126,10 +130,10 @@ __meta__ = {
 [node name="health_bar" parent="canvas_layer/margin_container" instance=ExtResource( 6 )]
 margin_left = 8.0
 margin_top = 8.0
-margin_right = 96.0
-margin_bottom = 12.0
-max_health = 20.0
-current_health = 20.0
+margin_right = 98.0
+margin_bottom = 15.0
+max_health = 40.0
+current_health = 40.0
 
 [node name="ouch_time" type="Tween" parent="."]
 

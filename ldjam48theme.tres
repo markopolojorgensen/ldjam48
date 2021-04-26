@@ -1,9 +1,15 @@
-[gd_resource type="Theme" load_steps=3 format=2]
+[gd_resource type="Theme" load_steps=4 format=2]
 
 [ext_resource path="res://m3x6_dynamic_font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://external/aseprite/ninepatch_00.png" type="Texture" id=2]
 
-[sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0.133333, 0.00784314, 0, 1 )
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 16, 16 )
+margin_left = 2.0
+margin_right = 2.0
+margin_top = 2.0
+margin_bottom = 2.0
 
 [resource]
 default_font = ExtResource( 1 )

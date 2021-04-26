@@ -1,5 +1,15 @@
 TODO
 
+  
+  fix rude dude timing
+  dummy floor once per run
+  
+  low health
+
+  fade???
+  infinite health option
+
+
 
     1 hour
       more enemies
@@ -12,7 +22,6 @@ TODO
       music
     1 hours
       dash / dodge cartwheel
-      bigger player health bar
       ???
 
 

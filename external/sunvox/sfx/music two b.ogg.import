@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/music two b.ogg-fe3eea42b3c0fbd68090f840e2a21186.oggstr"
+
+[deps]
+
+source_file="res://external/sunvox/sfx/music two b.ogg"
+dest_files=[ "res://.import/music two b.ogg-fe3eea42b3c0fbd68090f840e2a21186.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

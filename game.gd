@@ -22,6 +22,7 @@ var random_floors = [
 ]
 
 func _ready():
+	randomize()
 	global.connect("logic_update", self, "logic_update")
 	global.current_floor_number = level_to_start_on
 	load_floor()
@@ -34,9 +35,13 @@ func load_floor():
 	current_floor = floor_instance
 	add_child(floor_instance)
 	global.do_logic_update()
+	
+	if global.player and global.health:
+		global.player.set_health(global.health)
 
 func logic_update():
 	if global.is_floor_finished:
+		global.health = global.player.get_health()
 		global.is_floor_finished = false
 		if global.current_floor_number == 1 and global.tutorial_skip:
 			global.current_floor_number = 4
@@ -55,6 +60,8 @@ func logic_update():
 func get_floor_scene(floor_number):
 	match floor_number:
 		0:
+			$music_manager.play_music_one()
+			global.is_dummy_floor_available = true
 			return preload("res://floors/title_screen.tscn")
 		1:
 			return preload("res://floors/tutorial_floor.tscn")
@@ -64,13 +71,33 @@ func get_floor_scene(floor_number):
 			return preload("res://floors/tutorial_floor_shortcuts.tscn")
 		4,5,6,7:
 			global.front_half = true
-			return random_floors[randi() % random_floors.size()]
+			
+			var roll = randi() % random_floors.size()
+			while not global.is_dummy_floor_available and roll == 11:
+				print("reroll to avoid dummies")
+				roll = randi() % random_floors.size()
+			if roll == 11:
+				global.is_dummy_floor_available = false
+			
+			return random_floors[roll]
+		
 		8:
 			return preload("res://floors/frogotten_floor.tscn")
+		
 		9,10,11,12:
 			global.front_half = false
-			return random_floors[randi() % random_floors.size()]
+			$music_manager.fade_back_half()
+			
+			var roll = randi() % random_floors.size()
+			while not global.is_dummy_floor_available and roll == 11:
+				print("reroll to avoid dummies")
+				roll = randi() % random_floors.size()
+			if roll == 11:
+				global.is_dummy_floor_available = false
+			
+			return random_floors[roll]
 		13:
+			$music_manager.fade_music_two()
 			return preload("res://floors/final_boss_floor.tscn")
 		14:
 			return preload("res://floors/treasure_floor.tscn")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://floors/floor.gd" type="Script" id=1]
 [ext_resource path="res://ldjam48theme.tres" type="Theme" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://external/aseprite/walls_00.png" type="Texture" id=5]
 [ext_resource path="res://external/aseprite/walls_01.png" type="Texture" id=6]
+[ext_resource path="res://external/aseprite/ui/health_bars/arrow.png" type="Texture" id=7]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 48, 48, 0, 48, 0, 0, 48, 0 )
@@ -102,20 +103,29 @@ __meta__ = {
 margin_left = 16.0
 margin_top = 16.0
 margin_right = 624.0
-margin_bottom = 56.0
+margin_bottom = 60.0
 theme = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="margin_container" type="MarginContainer" parent="title_card_layer/margin_container/panel_container"]
-margin_right = 608.0
-margin_bottom = 40.0
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 606.0
+margin_bottom = 42.0
 custom_constants/margin_top = 16
 custom_constants/margin_bottom = 16
 
 [node name="title_card" type="Label" parent="title_card_layer/margin_container/panel_container/margin_container"]
 margin_top = 16.0
-margin_right = 608.0
+margin_right = 604.0
 margin_bottom = 24.0
 align = 1
+
+[node name="arrow" type="Node2D" parent="."]
+visible = false
+
+[node name="arrow" type="Sprite" parent="arrow"]
+position = Vector2( 42, 0 )
+texture = ExtResource( 7 )

@@ -1,7 +1,7 @@
 extends RigidBody2D
 
 var direction : Vector2
-const speed = 120
+const speed = 150
 
 func _ready():
 	$animated_sprite.play()
@@ -14,3 +14,4 @@ func _on_fireball_body_entered(body):
 	if body.has_method("hit_by_fireball"):
 		body.hit_by_fireball(self)
 	queue_free()
+
