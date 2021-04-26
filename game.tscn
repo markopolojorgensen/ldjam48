@@ -174,7 +174,6 @@ animations = [ {
 
 [node name="game" type="Node2D"]
 script = ExtResource( 4 )
-level_to_start_on = 11
 
 [node name="font_credit_label" type="RichTextLabel" parent="."]
 visible = false
@@ -195,7 +194,6 @@ layer = 20
 
 [node name="logo_intro" parent="logo_intro" instance=ExtResource( 1 )]
 visible = false
-skip = true
 
 [node name="you_win" type="CanvasLayer" parent="."]
 layer = 5
@@ -336,7 +334,6 @@ script = ExtResource( 159 )
 [node name="logo_delay" type="Timer" parent="music_manager"]
 wait_time = 2.1
 one_shot = true
-autostart = true
 
 [node name="one" type="AudioStreamPlayer" parent="music_manager"]
 stream = ExtResource( 160 )

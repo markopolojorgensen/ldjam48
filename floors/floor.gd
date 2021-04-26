@@ -60,7 +60,7 @@ func _ready():
 		$tween.start()
 
 
-func _process(delta):
+func _process(_delta):
 	if show_arrow:
 		$arrow.show()
 		$arrow.global_position = global.player.global_position

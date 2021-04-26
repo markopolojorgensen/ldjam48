@@ -6,6 +6,8 @@ export(bool) var flip_perish = false
 
 export(PackedScene) var perish_fx_scene
 
+var perished = false
+
 func _ready():
 	$health_bar.hide()
 	$tied_up_sprite.hide()
@@ -21,7 +23,7 @@ func get_faction():
 	return global.FACTIONS.ENEMIES
 
 func is_alive():
-	return $health_bar.current_health > 0
+	return $health_bar.current_health > 0 and not perished
 
 func hit_by_sword():
 	$ouch_duration.start()
@@ -33,6 +35,10 @@ func hit_by_sword():
 
 
 func perish():
+	if perished:
+		return
+	perished = true
+	
 	if perish_fx_scene:
 		var inst = perish_fx_scene.instance()
 		get_parent().add_child(inst)

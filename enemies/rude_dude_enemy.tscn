@@ -63,11 +63,11 @@ wait_time = 0.4
 one_shot = true
 
 [node name="prep_duration" type="Timer" parent="." index="8"]
-wait_time = 0.75
+wait_time = 0.7
 one_shot = true
 
 [node name="shoot_duration" type="Timer" parent="." index="9"]
-wait_time = 2.0
+wait_time = 1.75
 one_shot = true
 
 [node name="extra_hide" type="Timer" parent="." index="10"]

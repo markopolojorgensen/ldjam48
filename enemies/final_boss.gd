@@ -29,3 +29,9 @@ func hit_by_sword():
 	$animated_sprite.play("ouch")
 	$ouch_duration.start()
 
+func perish():
+	.perish()
+	
+	$summoner_behavior.num_summons = 0
+	get_tree().call_group("enemies", "perish")
+

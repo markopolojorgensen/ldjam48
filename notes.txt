@@ -1,13 +1,15 @@
 TODO
-
-  
-  fix rude dude timing
-  dummy floor once per run
-  
-  low health
-
-  fade???
   infinite health option
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -222,9 +224,6 @@ potential theme ideas
 
 
 post-jam todo
-  REMOVE INSTAQUIT
-  REMOVE slowmo mode
-  
   make builds
   test builds
   
@@ -242,12 +241,17 @@ post-jam todo
 
 
 Description:
+
+Face off against prowling peloponnesian polliwogs in this dungeon of doom as you delve deeper and deeper in search of your arch-nemesis.
+
+Tools & Credits
 * Godot
 * Aseprite
 * Sunvox
 * JuiceFX, SmearFX, Pixel FX Designer
 * ColorTool
 * Font: m3x6 by Daniel Linssen
+* Freesound.org
 
 
 

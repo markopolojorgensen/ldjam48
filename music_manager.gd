@@ -5,13 +5,15 @@ var latch = false
 func _ready():
 	global.music_manager = self
 	global.connect("logic_update", self, "logic_update")
+	$logo_delay.start()
 
 func logic_update():
 	if global.player_lost:
 		latch = false
 
 func play_music_one():
-	play_stream($one)
+	if $logo_delay.is_stopped():
+		play_stream($one)
 
 func play_stream(stream:AudioStreamPlayer):
 	for child in get_children():
@@ -48,6 +50,6 @@ func fade(from:AudioStreamPlayer, to:AudioStreamPlayer, match_position):
 	$tween.interpolate_property(to, "volume_db", -6, 0, 0.3, Tween.TRANS_CUBIC, Tween.EASE_IN_OUT)
 	$tween.start()
 
-
 func _on_logo_delay_timeout():
+	$logo_delay.stop()
 	play_music_one()

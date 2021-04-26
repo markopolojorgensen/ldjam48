@@ -151,8 +151,7 @@ ui_down={
 }
 instaquit={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777217,"unicode":0,"echo":false,"script":null)
- ]
+"events": [  ]
 }
 toggle_fullscreen={
 "deadzone": 0.5,
@@ -178,8 +177,7 @@ swing={
 }
 slowmo={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":80,"unicode":0,"echo":false,"script":null)
- ]
+"events": [  ]
 }
 
 [layer_names]
