@@ -74,3 +74,16 @@ align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="font_credit_label" type="RichTextLabel" parent="." index="10"]
+margin_left = 50.0
+margin_top = 49.0
+margin_right = 219.0
+margin_bottom = 85.0
+theme = ExtResource( 2 )
+text = "m3x6 font by Daniel Linssen:
+https://managore.itch.io/m3x6
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}

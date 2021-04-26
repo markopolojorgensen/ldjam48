@@ -118,3 +118,4 @@ func _on_middle_timeout():
 	global.player_lost = false
 	global.title_screen = false
 	is_restarting = false
+	global.health = 30

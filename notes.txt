@@ -226,7 +226,13 @@ potential theme ideas
 post-jam todo
   make builds
   test builds
+    windows
+    html
+    mac???
+    linux
   
+  gifs & images
+
   itch page description
   ldjam page description
   github readme
