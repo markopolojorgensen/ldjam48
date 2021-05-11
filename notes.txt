@@ -1,6 +1,6 @@
 TODO
   infinite health option
-
+  fix hoplite bug
 
 
 
@@ -260,6 +260,14 @@ Tools & Credits
 * Freesound.org
 
 
+Tools & Credits
+* [Godot](https://godotengine.org/)
+* [Aseprite](https://www.aseprite.org/)
+* [Sunvox](https://warmplace.ru/soft/sunvox/)
+* [JuiceFX, SmearFX, Pixel FX Designer](https://codemanu.itch.io/)
+* [ColorTool](https://store.steampowered.com/app/948220/ColorTool/)
+* [Font: m3x6 by Daniel Linssen](https://managore.itch.io/m3x6)
+* [Freesound.org](https://freesound.org/)
 
 
 
