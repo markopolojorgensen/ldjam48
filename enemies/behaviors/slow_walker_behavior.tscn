@@ -23,7 +23,7 @@ shape = SubResource( 1 )
 
 [node name="aggro_ray" type="RayCast2D" parent="."]
 enabled = true
-collision_mask = 3
+collision_mask = 11
 
 [node name="top_down_movement" parent="." instance=ExtResource( 4 )]
 body_path = NodePath("../..")
