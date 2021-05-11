@@ -5,11 +5,11 @@
 
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 2 )
-region_rect = Rect2( 0, 0, 16, 16 )
-margin_left = 2.0
-margin_right = 2.0
-margin_top = 2.0
-margin_bottom = 2.0
+region_rect = Rect2( 1, 1, 14, 14 )
+margin_left = 1.0
+margin_right = 1.0
+margin_top = 1.0
+margin_bottom = 1.0
 
 [resource]
 default_font = ExtResource( 1 )

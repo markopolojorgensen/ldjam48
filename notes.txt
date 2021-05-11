@@ -1,5 +1,8 @@
 TODO
-  infinite health option
+  easy mode
+    restart floor on death, don't kick back to the title screen
+    fresh health bar on each floor
+  
   fix hoplite bug
 
 

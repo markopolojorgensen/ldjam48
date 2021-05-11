@@ -33,6 +33,8 @@ var item_flags = []
 
 var music_manager
 
+var easy_mode = false
+
 func do_logic_update():
 	emit_signal("logic_update")
 
@@ -84,6 +86,10 @@ func _unhandled_input(event):
 	
 	if event.is_action_pressed("screenshot"):
 		screenshot()
+	
+	if event.is_action_pressed("toggle_easy_mode"):
+		easy_mode = not easy_mode
+		do_logic_update()
 	
 	if event.is_action_pressed("slowmo"):
 		if Engine.time_scale != 1:

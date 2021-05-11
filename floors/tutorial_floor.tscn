@@ -11,7 +11,7 @@ title_card_text = "The Tutorial"
 position = Vector2( 188, 292 )
 
 [node name="skip_tutorial_ladder" parent="." index="1" instance=ExtResource( 5 )]
-position = Vector2( 514, 293 )
+position = Vector2( 513, 293 )
 tutorial_skip = true
 
 [node name="player" parent="y_sort" index="0"]

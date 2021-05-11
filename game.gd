@@ -36,7 +36,7 @@ func load_floor():
 	add_child(floor_instance)
 	global.do_logic_update()
 	
-	if global.player and global.health:
+	if not global.easy_mode and global.player and global.health:
 		global.player.set_health(global.health)
 
 func logic_update():

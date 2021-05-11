@@ -2,6 +2,7 @@ extends Node2D
 
 var active = false
 export(bool) var tutorial_skip = false
+export(bool) var easy_mode = false
 
 func _ready():
 	global.connect("logic_update", self, "logic_update")
