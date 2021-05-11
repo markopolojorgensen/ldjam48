@@ -24,15 +24,15 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 9 ), ExtResource( 14 ), ExtResource( 10 ), ExtResource( 8 ), ExtResource( 15 ), ExtResource( 7 ), ExtResource( 11 ), ExtResource( 13 ), ExtResource( 12 ) ],
-"loop": false,
-"name": "ouch",
-"speed": 30.0
-}, {
 "frames": [ ExtResource( 16 ) ],
 "loop": true,
 "name": "hop",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 14 ), ExtResource( 10 ), ExtResource( 8 ), ExtResource( 15 ), ExtResource( 7 ), ExtResource( 11 ), ExtResource( 13 ), ExtResource( 12 ) ],
+"loop": false,
+"name": "ouch",
+"speed": 30.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
@@ -63,7 +63,6 @@ margin_bottom = 10.0
 wait_time = 0.3
 
 [node name="collision_shape_2d" type="CollisionShape2D" parent="." index="6"]
-visible = false
 rotation = 1.5708
 shape = SubResource( 2 )
 

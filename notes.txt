@@ -1,9 +1,10 @@
 TODO
+  flies shouldn't aggro through obstacles
+  ladders shouldn't re-open once they've opened
+  pillar tilemap should be on obstacles layer for every floor
   easy mode
     restart floor on death, don't kick back to the title screen
-    fresh health bar on each floor
-  
-  fix hoplite bug
+
 
 
 

@@ -75,6 +75,48 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="v_box_container2" type="VBoxContainer" parent="tutorial_messages" index="1"]
+margin_left = 376.0
+margin_top = 48.0
+margin_right = 624.0
+margin_bottom = 116.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="label" type="Label" parent="tutorial_messages/v_box_container2" index="0"]
+margin_right = 248.0
+margin_bottom = 8.0
+theme = ExtResource( 2 )
+text = "P toggles 'Easy Mode'"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="label2" type="Label" parent="tutorial_messages/v_box_container2" index="1"]
+margin_top = 12.0
+margin_right = 248.0
+margin_bottom = 20.0
+theme = ExtResource( 2 )
+text = "In Easy Mode, you get full health at the start of each floor"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="panel_container" parent="title_card_layer/margin_container" index="0"]
+margin_bottom = 58.0
+
+[node name="margin_container" parent="title_card_layer/margin_container/panel_container" index="0"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 607.0
+margin_bottom = 41.0
+
+[node name="title_card" parent="title_card_layer/margin_container/panel_container/margin_container" index="0"]
+margin_right = 606.0
+
 [node name="font_credit_label" type="RichTextLabel" parent="." index="10"]
 margin_left = 50.0
 margin_top = 49.0

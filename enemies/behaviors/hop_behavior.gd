@@ -30,7 +30,9 @@ func _process(_delta):
 		hop_time = 0
 		
 		# disable collision
-		(shape as CollisionShape2D).set_deferred("disabled", true)
+		# (shape as CollisionShape2D).set_deferred("disabled", true)
+		(body as RigidBody2D).set_deferred("collision_layer", 0)
+		(body as RigidBody2D).set_deferred("collision_mask", 9)
 
 func _integrate_forces(state : Physics2DDirectBodyState):
 	if is_hopping:
@@ -68,5 +70,7 @@ func _on_aggro_aggro_lost(_entity):
 
 func _on_suspend_duration_timeout():
 	(shape as CollisionShape2D).set_deferred("disabled", false)
+	(body as RigidBody2D).set_deferred("collision_layer", 4)
+	(body as RigidBody2D).set_deferred("collision_mask", 11)
 	call_deferred("create_slam")
 
