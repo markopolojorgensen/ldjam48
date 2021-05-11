@@ -9,10 +9,11 @@ func _ready():
 	fancy_hide()
 
 func fancy_show():
-	active = true
-	$closed_sprite.hide()
-	$open_sprite.show()
-	$open.play()
+	if not active:
+		active = true
+		$closed_sprite.hide()
+		$open_sprite.show()
+		$open.play()
 
 func fancy_hide():
 	$closed_sprite.show()
