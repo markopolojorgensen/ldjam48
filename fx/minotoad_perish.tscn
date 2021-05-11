@@ -176,6 +176,7 @@ animations = [ {
 [node name="minotoad_perish" instance=ExtResource( 8 )]
 
 [node name="animated_sprite" parent="." index="0"]
+position = Vector2( 0, -25 )
 frames = SubResource( 1 )
 
 [node name="audio_stream_player_2d" parent="." index="1"]

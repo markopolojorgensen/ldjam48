@@ -30,6 +30,9 @@ func hit_by_sword():
 	$ouch_duration.start()
 
 func perish():
+	if perished: # set in Enemy.perish()
+		return
+	
 	.perish()
 	
 	$summoner_behavior.num_summons = 0

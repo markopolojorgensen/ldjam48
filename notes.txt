@@ -1,10 +1,4 @@
 TODO
-  pillar tilemap should be on obstacles layer for every floor
-  easy mode
-    restart floor on death, don't kick back to the title screen
-
-
-
 
 
 
